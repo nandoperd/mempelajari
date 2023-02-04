@@ -1,0 +1,342 @@
+/* Halo, ini adalah catatan belajar css saya, css ini akan menjadi source dari halaman belajar.html ya */
+/* berikut adalah struktur dari penulisan CSS
+   selektor {
+        properti: nilai;
+   }
+*/
+
+/* pada contoh di bawah ini, h6 dan p memiliki properti yang sama */
+h6,p {
+    color: rgb(82, 82, 82);
+    font-size: 15px;
+}
+
+/* border memiliki rumus seperti ini : border A B C;
+A adalah ukuran ketebalan bordernya
+B adalah jenis dari border
+C adalah warna dari border */
+h4 {
+    border: 1px solid mediumaquamarine;
+    /* border-style: dashed; */
+    /* border-top  : 1ch; */
+    border-radius: 0%;
+    border-width: 2px;
+    /* border-color: mediumvioletred; */
+}
+
+/* garis border */
+p.solid {border-style: solid;}
+p.dotted {border-style: dotted;}
+p.dashed {border-style: dashed;}
+p.double {border-style: double;}
+p.groove {border-style: groove;}
+p.ridge {border-style: ridge;}
+p.inset {border-style: inset;}
+p.outset {border-style: outset;}
+p.none {border-style: none;}
+p.hidden {border-style: hidden;}
+p.mix {border-style: dotted dashed solid double;}
+
+/* posisi border */
+p.top {border-top: 10px solid green;}
+
+/* border radius memungkinkan untuk memperindah box seperti diberi lengkungan */
+p.lengkungan {
+    border: 2px solid saddlebrown;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* padding */
+p.puding {
+    border: 1px solid mediumblue;
+    padding: 5px;
+}
+
+/* Setiap sisi, bisa mempunyai padding yang berbeda. Ada dua cara:
+    memberi 4 nilai di padding
+    memberi properti detail padding-(arah) */
+.empat {
+    border: 1px solid violet;
+    padding: 10px 5px 2px 20px;
+}
+.semua {
+    border: 1px solid purple;
+    padding-top: 5px;
+    padding-right: 10px;
+    padding-bottom: 15px;
+    padding-left: 25px;
+}
+p.tengah {
+    text-align: center;
+}
+p.gede {
+    font-size: 300%;
+}
+
+/*   universal css, * memiliki arti bahwa semua elemen html diatur oleh * , contoh di bawah ini : */
+/* * {
+    font-size: 100%;
+} */
+/* penjelasan multiple stylesheet : 
+jika ada banyak css, maka css yang dipanggil adalah yang paling terakhir atau paling bawah yang akan menimpa
+data css sebelumnya. contoh, jika css internal ditulis di bawah link rel ="external.css" , maka yang internal 
+lah yang akan dipanggil */
+/* Urutan prioritas CSS : 
+1. Inline style (inside an HTML element)
+2. External and internal style sheets (in the head section)
+3. Browser default */
+
+/* Background */
+/* background-color
+background-image
+background-repeat
+background-attachment
+background-position
+background (shorthand property) */
+
+.opacity {
+    background-color: mediumaquamarine;
+    opacity: 0.3;
+}
+/* catatan, jika kita memakai opacity maka tulisan di bawahnya akan mengikut dan membuat tulisan jadi susah dibaca */
+
+/* contoh background repeat */
+/* body {
+    background-image: url(img/bg1.jpg);
+    background-repeat: repeat-x;
+    background-repeat: no-repeat;
+    background-position: right;
+    margin-right: 500px;
+} */
+
+/* background attachment */
+/* body {
+    background-image: url(img/bg1.jpg);
+    tetap
+    background-attachment: fixed; 
+    scroll
+    background-attachment: scroll; 
+} */
+
+/* border-width */
+p.borderwidth {
+    border-style: solid;
+    border-width: 5px 20px; /* 5px atas dan bawah, 20px kanan kiri */
+  }
+
+/* border-color */
+p.solidgreen {
+    border-style: solid;
+    border-color: mediumseagreen;
+  } 
+  
+  p.dottedblue {
+    border-style: dotted;
+    border-color: mediumblue;
+  } 
+
+/* individual side border */
+p.individual {
+    border-top-style: dotted;
+    border-right-style: solid;
+    border-bottom-style: dotted;
+    border-left-style: solid;
+  }
+
+  p.individual2 {
+    border-style: dotted solid;
+  }
+
+  /* penjelasan : 
+  jika ada 4  value seperti ini -> border-style: dotted solid double dashed;
+    maka,       top border is dotted
+                right border is solid
+                bottom border is double
+                left border is dashed
+
+   jika ada 3 value seperti ini -> border-style: dotted solid double;
+    maka,       top border is dotted
+                right and left borders are solid
+                bottom border is double
+
+    jika ada 2 value seperti ini -> border-style: dotted solid;
+    maka,       top and bottom borders are dotted
+                right and left borders are solid
+                If the border-style property has one value:
+
+    jika ada 1 value seperti ini ->border-style: dotted;
+    maka,       all four borders are dotted
+*/
+
+p.kiri {
+    border-left: 6px solid tomato;
+}
+
+.hw {
+    height: 30px;
+    width: 50%;
+    border: 5px solid saddlebrown;
+}
+
+/* outline, outline adalah garis di luar border */
+p.dotted-o {outline-style: dotted;}
+p.dashed-o {outline-style: dashed;}
+p.solid-o {outline-style: solid;}
+p.double-o {outline-style: double;}
+p.groove-o {outline-style: groove;}
+p.ridge-o {outline-style: ridge;}
+p.inset-o {outline-style: inset;}
+p.outset-o {outline-style: outset;}
+
+/* outline width ada berbagai macam : thin,medium,thick atau specific size */
+p.outline-w {
+    border: 1px solid black;
+    outline-style: solid;
+    outline-color: mediumseagreen;
+    /* outline-width: thin; */
+    outline-width: medium;
+    /* outline-width: thick; */
+    /* outline-width: 6px; */
+  }
+
+/* outline ringkas */
+p.outline-s {outline: thick ridge pink;}
+
+/* outline offset, memberi jarak antar border */
+p.offset {
+    margin: 30px;
+    border: 1px solid black;
+    outline: 1px solid red;
+    outline-offset: 15px;
+  }
+
+/* Text */
+.text {
+    text-align: center;
+    text-transform: uppercase;
+}
+p.texto {
+    text-indent: 50px;
+    text-align: justify;
+    letter-spacing: 2px;
+}
+a.texti {
+    text-decoration: overline;
+    color: royalblue;
+}
+p.text-a {
+    text-align-last: right;
+    text-align-last: left;
+}
+
+/* membuat text menjadi terbalik memakai direction rtl */
+p.text-b {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+  }
+
+/* vertical align */
+img.va {
+    /* vertical-align: baseline; */
+    /* vertical-align: text-top; */
+    /* vertical-align: text-bottom; */
+    /* vertical-align: sub; */
+    vertical-align: super;
+}
+
+/* text-decoration */
+p.text-d {
+    /* text-decoration: overline; */
+    /* text-decoration: line-through; */
+    /* text-decoration: underline; */
+    text-decoration: overline underline;
+    text-decoration-color: red;
+    /* text-decoration-style: dotted;  */
+    text-decoration-style: wavy;
+    text-decoration-thickness: 3px;
+}
+p.text-ds {
+    text-decoration: underline burlywood dotted 2px;
+}
+a.tanpagaris {
+    text-decoration: none;
+    color: forestgreen;
+}
+
+/* transformation */
+p.text-transform {
+    /* text-transform: uppercase; */
+    /* text-transform: lowercase; */
+    /* huruf kapital di depan kata */
+    text-transform: capitalize;
+}
+
+/* spacing */
+p.text-space {
+    /* memberi jarak di awal kalimat */
+    /* text-indent: 50px; */
+
+    /* jarak antar huruf */
+    /* letter-spacing: 3px; */
+
+    /* jarak antar baris */
+    /* line-height: 2.0; */
+
+    /* jarak antar kata */
+    word-spacing: 3px;
+
+    /* spasi berlanjut terus-menerus */
+    /* white-space: nowrap; */
+}
+
+/* text-shadow */
+p.text-shadow {
+    /* jika 2 seperti di bawah ini menunjukkan horizontal 3px vertical 2px */
+    /* text-shadow: 3px 2px; */
+
+    /* text shadow warna */
+    /* text-shadow: 3px 2px red; */
+
+    /* di bawah ini 5px adalah blur */
+    /* text-shadow: 3px 2px 5px red; */
+
+    /* contoh */
+    /* color: white;
+    text-shadow: 2px 2px 4px #000000;
+
+    text-shadow: 0 0 3px #FF0000;
+
+    text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF; */
+
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+
+/* fonts */
+p.serif {
+    font-family: 'Times New Roman', Times, serif;
+}
+p.s-serif {
+    font-family: Arial, Helvetica, sans-serif;
+}
+p.monospace {
+    font-family: 'Courier New', Courier, monospace;
+}
+p.cursive {
+    font-family: "Brush Script MT", cursive;
+}
+p.fantasy {
+    font-family: Copperplate, Papyrus, fantasy;
+}
+p.variant {
+        font-variant: small-caps;
+}
+
+/* shorthand font */
+p.font-s {
+    font: 20px Arial, sans-serif;
+    /* font: italic small-caps bold 12px/30px Georgia, serif; */
+}
+
+

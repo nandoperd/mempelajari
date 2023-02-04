@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar CSS</title>
+
+    <link rel="stylesheet" href="stylebelajar.css">
+
+    <!-- google font -->
+    <!-- penulisan mengambil 1 referensi font dari google font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+
+    <!-- penulisan mengambil banyak referensi font dari google font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong">
+
+    <!-- penulisan memakai google font effect -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide&effect=fire">
+
+    <!-- penulisan mengambil banyak efek font dari google font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide&effect=neon|outline|emboss|shadow-multiple">
+
+    <!-- di bawah ini adalah css juga, tapi khusus yang id dan classs aja -->
+    <style>
+        /* contoh css id, cirinya adalah didahului pagar */
+        #biru{
+            background-color: aqua;
+            color: mediumblue;
+        }
+
+        /* contoh css class, cirinya adalah didahului titik */
+        .monyet{
+            background-color: brown;
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h6>aku h6</h6>
+    <p>aku p</p>
+
+    <h2 id="biru">Gue anak ID</h2> <!--mengambil css id pada style di atas-->
+    <h2 class="monyet">Gue anak class</h2> <!--mengambil css class pada style di atas-->
+
+    <p><b>BAB : Warna</b></p>
+
+    <label for="warna">Pilih warna disini :</label>
+    <input type="color">
+
+    <!-- contoh warna dengan RGB -->
+    <p style="background-color: rgb(100, 0, 30);">Saya di RGB in</p>
+
+    <!-- contoh warna dengan kode hex (bukan css) -->
+    <p style="color: #000000;">hitam</p> 
+
+    <!-- contoh warna dengan kode CSS -->
+    <p style="background-color:#32a852;">Hijau</p>
+
+    <h3>referensi untuk mencari warna : <a href="https://www.google.com/search?si=AEcPFx6YkBiWpHxo7opt88fitap9hOnJJgyHTWCBgtaj-52bsO0sqYf0IQtB3oLNCWbXNFxSA1Wf3VrwXMOFDue_lFiGXmc69g%3D%3D&hl=en-ID&kgs=6052807e5e27813e&shndl=21&source=sh/x/fbx/1&fbxst=CgkKByMzMmE4NTI#cobssid=s">Google color picker</a></h3>
+    <br>
+
+    <p><b>BAB : Box</b></p>
+    <!-- box memiliki 3 elemen : border, padding, dan margin -->
+
+    <!-- elemen border -->
+    <!-- border
+    border-style
+    border-ARAH (top/bottom/right/left)
+    border-radius
+    border-width
+    border-color -->
+
+    <h4>Ane adalah percoaban border</h4>
+    <p><b><ins>Contoh garis border</ins></b></p>
+    <h1>Jenis jenis Border CSS </h1>
+
+    <!-- border style -->
+    <p class="solid">Border solid = lurus</p>
+    <p class="dotted">Border dotted = titik titik</p>
+    <p class="dashed">Border dashed = garis terpisah</p>
+    <p class="double">Border double = ada dua border seperti kotak.</p>
+    <p class="groove">Border groove </p>
+    <p class="ridge">Border ridge</p>
+    <p class="inset">Border Inset.</p>
+    <p class="outset">Border Outset.</p>
+    <p class="none">Tanpa Border.</p>
+    <p class="hidden">Border tesembunyi.</p>
+    <p class="mix">Border campuran.</p>
+
+    <!-- border position (arah/posisi) -->
+    <!-- - border-top (posisi atas saja)
+    - border-right (posisi kanan saja)
+    - border-bottom (posisi bawah saja)
+    - border-left (posisi kiri saja)
+    - border (semua arah) -->
+    <!-- contoh : -->
+    <p style="border-top: 1px dashed rgb(68, 61, 61);">Aku adalah tag p dengan border atas </p>
+    <p class="top">saya top solid di css sebelah</p>
+
+    <!-- contoh lengkungan -->
+    <p class="lengkungan">Lengkungan nih kan</p>
+
+    <!-- Ukuran border bisa dimanipulasi dengan properti border-width -->
+
+    <p style="border: 5px solid black;">Aku adalah tag p dengan border 5px </p>
+    <p style="border-width: 10px;">Aku adalah tag p dengan border 10px </p>
+
+    <!-- contoh memberikan 4 nilai properti berbeda dengan struktur (atas kanan bawah kiri) -->
+    <p style="border-color: blue red green yellow; border-width: 1px; border-style:solid;">
+        Aku adalah tag p dengan border penuh warna 
+    </p>
+
+    <!-- atau bisa juga dengan spesifik -->
+    <p style="border-bottom-color:green; border-width: 1px; border-style:solid;">
+        Aku adalah tag p 
+    </p>
+
+    <p style="border-bottom: 1px dotted gray;">gambaran box yang berisi padding, margin, dan border :</p>
+    <img src="img/boxmodel-css.jpg" alt="gambaran box model css"> 
+
+    <!-- padding -->
+    <p class="puding">Aku dikasih padding dong</p>
+    <p class="empat">Aku padding dengan 4 arah</p>
+    <p class="semua">Aku padding dengan semuanya</p>
+
+    <!-- batas dari kodi.ng  -->
+
+    <!-- mulai referensi w3school -->
+    <p style="text-align: left; color: mediumseagreen;"><small><ins>#css w3schools</ins></small></p>
+    <!-- memanggil dua model css bersamaan -->
+    <p class="tengah gede">Saya kombinasi dari tengah dan gede</p>
+
+    <a href="https://www.w3schools.com/colors/colors_names.asp" target="_blank">referensi Warna CSS</a>
+
+    <!-- background menggunakan opacity -->
+    <p class="opacity">aku memakai background dengan opacity</p>
+
+    <!-- background repeat -->
+    <!-- coba nyalakan dan matikan di css bg repeat pada baris 104 -->
+
+    <!-- contoh border-width -->
+    <p class="borderwidth">Contoh border-width</p>
+
+    <!-- contoh border color -->
+    <p class="solidgreen">Hijau Solid</p>
+    <p class="dottedblue">Biru Dotted</p>
+
+    <!-- contoh individual side border -->
+    <p class="individual">Individual Side Border</p>
+    <p class="individual2">Bisa juga seperti ini</p>
+
+    <!-- contoh border shorthand -->
+    <p class="kiri">Bagian 1</p>
+    <p class="kiri">Bagian 2</p>
+
+    <!-- height dan width -->
+    <div class="hw">Contoh height dan width</div>
+
+    <!-- contoh outline -->
+    <p class="dotted-o">A dotted outline</p>
+    <p class="dashed-o">A dashed outline</p>
+    <p class="solid-o">A solid outline</p>
+    <p class="double-o">A double outline</p>
+    <p class="groove-o">A groove outline. The effect depends on the outline-color value.</p>
+    <p class="ridge-o">A ridge outline. The effect depends on the outline-color value.</p>
+    <p class="inset-o">An inset outline. The effect depends on the outline-color value.</p>
+    <p class="outset-o">An outset outline. The effect depends on the outline-color value.</p>
+
+    <!-- outline width -->
+    <p class="outline-w">Outline width</p>
+
+    <p class="outline-s">Outline ringkas</p>
+
+    <!-- outline offset -->
+    <p class="offset">Outline offset</p>
+
+    <!-- text -->
+    <div class="text">
+        <h1>TEXT</h1>
+        <p class="texto">Ini adalah contoh penulisan menggunakan CSS</p>
+        <a href="https://github.com/nandoperd" target="_blank" class="texti">nandoperd</a>
+    </div>
+
+    <!-- contoh text align last -->
+    <p class="text-a">contoh align-last. a i u ala desa desu a i u ala desa desu. a i u ala desa desu
+        a i u ala desa desua i u ala desa desu. a i u ala desa desua i u ala desa desua i u ala desa.
+    </p>
+    <p class="text-b">contoh pakai direction. a i u ala desa desu a i u ala desa desu. a i u ala desa 
+        desu a i u ala desa desua i u ala desa desu. a i u ala desa desua i u ala desa desua i u ala. 
+    </p>
+
+    <!-- contoh vertical-align dengan elemen gambar -->
+    <p>
+        sebuah <img class="va" src="img/NP.png" alt="np" style="width: 5%;"> gambar dari NP
+    </p>
+
+    <p class="text-d">contoh text decoration</p>
+    <p class="text-ds">contoh shorthand text decoration</p>
+    <p>link tanpa garis <a href="https://github.com/nandoperd" class="tanpagaris" target="_blank">nandoperd</a></p>
+
+    <p class="text-transform">Contoh Text Transform</p>
+
+    <p class="text-space">Contoh Text Spacing. Contoh Text Spacing Contoh Text Spacing Contoh Text Spacing 
+        Contoh Text Spacing Contoh Text Spacing. Contoh Text Spacing Contoh Text Spacing Contoh Text Spacing.
+        Contoh Text Spacing Contoh Text Spacing Contoh Text Spacing Contoh Text Spacing Contoh Text Spacing.
+    </p>
+
+    <!-- text shadow -->
+    <p class="text-shadow">text shadow</p>
+
+    <!-- font -->
+    <p class="serif">Ini tulisan memakai font serif</p>
+    <p class="s-serif">Ini tulisan memakai font sans-serif</p>
+    <p class="monospace">Ini tulisan memakai font monospace</p>
+    <p class="cursive">Ini tulisan memakai font cursive</p>
+    <p class="fantasy">Ini tulisan memakai font fantasy</p>
+
+    <!-- font variant -->
+    <p class="variant">Ini tulisan memakai font variant small</p>
+
+    <!-- font size responsive -->
+    <p style="font-size:5vw;">Font responsive menggunakan font size viewport</p>
+
+    <!-- google font, lihat di atas bagian head -->
+    <p style="font-family: Sofia, sans-serif";>Contoh font sofia punyanya google font</p>
+    <p style="font-family: Audiowide, sans-serif";>Contoh font Audiowide punyanya google font</p>
+    <p style="font-family: Trirong, serif";>Contoh font Trirong punyanya google font</p>
+    
+    <!-- google font ditambah style tambahan -->
+    <p style="font-family: Audiowide, sans-serif; font-size: 30px;
+    text-shadow: 3px 3px 3px #ababab;">Contoh font Audiowide dengan style tambahan</p>
+
+    <!-- google font efek, lihat Referensi di atas pada head -->
+    <p class="font-effect-fire">Contoh font Audiowide dengan tambahan efek</p>
+    <!-- class di atas tidak kita tuliskan di CSS melainkan dipanggil melalui link di atas (head) -->
+    <h1 class="font-effect-neon">Neon Effect</h1>
+    <h1 class="font-effect-outline">Outline Effect</h1>
+    <h1 class="font-effect-emboss">Emboss Effect</h1>
+    <h1 class="font-effect-shadow-multiple">Multiple Shadow Effect</h1>
+
+    <!-- referensi : contoh font yang selaras (menurut saya)
+    font-family: Poppins, sans-serif;
+    dan
+    font-family: 'Abril Fatface', serif;
+    atau lihar referensi lainnya : https://www.w3schools.com/css/css_font_pairings.asp -->
+
+    <p class="font-s">contoh shorthand font</p>
+    
+    
+</body>
+</html>
