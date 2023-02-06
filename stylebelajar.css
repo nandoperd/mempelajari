@@ -339,4 +339,56 @@ p.font-s {
     /* font: italic small-caps bold 12px/30px Georgia, serif; */
 }
 
+/* link */
+/* a:link - a normal, link yang belum dikunjungi
+a:visited - a link yang sudah dikunjungi user
+a:hover - a link ketika cursor mengarah ke link tersebut
+a:active - a link ketika diklik */
 
+/* aturannya : 
+a:hover MUST come after a:link and a:visited
+a:active MUST come after a:hover */
+
+/* contoh css link warna, tampilan. dan warna background.
+   di bawah ini sengaja dibuat class agar link lain tidak terdistrak  */
+
+/* unvisited link */
+a:link.link {
+    color: red;
+    text-decoration: none;
+    background-color: yellowgreen;
+  }
+  
+  /* visited link */
+  a:visited.link {
+    color: green;
+    text-decoration: none;
+    background-color: cyan;
+  }
+  
+  /* mouse over link */
+  a:hover.link {
+    color: hotpink;
+    text-decoration: underline;
+    background-color: teal;
+  }
+  
+  /* selected link */
+  a:active.link {
+    color: blue;
+    text-decoration: underline;
+    background-color: skyblue;
+  }
+
+  a:link.button, a:visited.button {
+    background-color: #f44336;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  a:hover.button, a:active.button {
+    background-color: red;
+  }
