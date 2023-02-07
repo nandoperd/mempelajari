@@ -392,3 +392,88 @@ a:link.link {
   a:hover.button, a:active.button {
     background-color: red;
   }
+
+  a:link.button2, a:visited.button2 {
+    background-color: white;
+    color: black;
+    border: 2px solid green;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  a:hover.button2, a:active.button2 {
+    background-color: green;
+    color: white;
+  }
+
+  /* list */
+  ul.a {
+    list-style-type: circle;
+  }
+  
+  ul.b {
+    list-style-type: square;
+  }
+  ul.c {
+    list-style-image: url('img/kotak.png');
+  }
+
+  ul.d {
+    list-style-position: outside;
+  }
+  
+  ul.e {
+    list-style-position: inside;
+  }
+
+  /* contoh ul lainnya */
+  ul.f {
+    border-left: 5px solid red;
+    background-color: #f1f1f1;
+    list-style-type: none;
+    padding: 10px 20px;
+  }
+
+  ul.g{
+    list-style-type: none;
+    padding: 0;
+    border: 1px solid #ddd;
+  }
+  
+  ul.g li {
+    padding: 8px 16px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  ul.g li:last-child {
+    border-bottom: none
+  }
+
+  /* tabel */
+  #tabel {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #tabel td, #tabel th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    /* contoh alignment */
+    text-align: center;
+    vertical-align: center;
+  }
+  
+  #tabel tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #tabel tr:hover {background-color: #ddd;}
+  
+  #tabel th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+    color: white;
+  }
