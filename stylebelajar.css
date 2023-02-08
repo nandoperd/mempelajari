@@ -466,9 +466,11 @@ a:link.link {
     vertical-align: center;
   }
   
+  /* tabel selang-seling warna background (zebra) */
   #tabel tr:nth-child(even){background-color: #f2f2f2;}
   
-  #tabel tr:hover {background-color: #ddd;}
+  /* tabel berwrna background ketika kursor diarahkan */
+  #tabel tr:hover {background-color: coral;}
   
   #tabel th {
     padding-top: 12px;
@@ -476,4 +478,48 @@ a:link.link {
     text-align: left;
     background-color: #04AA6D;
     color: white;
+  }
+
+  /* tabel responsif */
+  table.r {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {background-color: #f2f2f2;}
+
+  /* display */
+  /* pada dasarnya html/css memiliki elemen inline dan blockline, dengan display kita bisa merubah yang tadinya ,inline 
+  menjadi blockline dan sebaliknya   */
+  /* ada beberapa atribut display diantaranya : block, none, hidden, dll */
+  li.dis {
+    display: inline;
+  }
+
+  /* posisi */
+  /* bisa lihat disini : https://www.w3schools.com/css/css_positioning.asp */
+
+  /* overflow */
+  /* overflow digunakan untuk memerintahkan apa yang dapat dilakukan jika tampilan melebihi size pada elemen di web */
+  /* contoh */
+  div.ov {
+    background-color: mediumspringgreen;
+    width: 200px;
+    height: 85px;
+    border: 1px solid;
+    /* overflow default biasanya visible, jadi melewati begitu saja */
+    /* overflow: visible;  */
+    /* overflow: scroll; */
+    /* overflow: hidden; */
+    overflow: auto;
+
+    /* menghilangkan garis scroll horizontal */
+    overflow-x: hidden;
+    /* mengaktifkan garis scroll vertical */
+    overflow-y: scroll;
   }
