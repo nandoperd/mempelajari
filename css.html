@@ -443,6 +443,69 @@
             Bersama jimjum dan sunny Bersama jimjum dan sunny Bersama jimjum dan sunny Bersama jimjum dan sunny
         </p>
       </div>
+
+      <!-- float -->
+      <img src="img/NP.png" alt="np" class="f">
+
+      <!-- menggunakan clear dari float sebelumnya -->
+      <h2>tanpa clear</h2>
+        <div class="f1">div</div>
+        <div class="f2">div ini akan mengikuti aturan class sebelumnya yang menggunakan float left</div>
+        <br><br>
+
+        <h2>dengan clear</h2>
+        <div class="f3">div</div>
+        <div class="f4">div ini tidak mengikuti yang sebelumnya karena sudah ditambahkan clear</div>
+
+      <!-- menggunakan clearfix -->
+      <p>float tanpa clearfix</p>
+      <div class="flo">
+        <img class="f" src="img/NP.png">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet...
+      </div>
+      
+      <br>
+
+      <p>float dengan clearfix</p>
+      <div class="clearfix">
+        <img class="f" src="img/NP.png">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet...
+      </div>
+
+      <!-- contoh float -->
+      <!-- float menu -->
+      <div class="clearfix">
+        <div class="box" style="background-color:#bbb">
+        <p>MENU 1</p>
+        </div>
+        <div class="box" style="background-color:#ccc">
+        <p>MENU 2</p>
+        </div>
+        <div class="box" style="background-color:#ddd">
+        <p>MENU 3</p>
+        </div>
+      </div>
+
+      <!-- float gambar -->
+      <div class="clearfix">
+        <div class="img-container">
+        <img src="img/sad.png" alt="Italy" style="width:100%">
+        </div>
+        <div class="img-container">
+        <img src="img/NP.png" alt="Forest" style="width:100%">
+        </div>
+        <div class="img-container">
+        <img src="img/smiling.png" alt="Mountains" style="width:100%">
+        </div>
+      </div>
+
+      <!-- float nav -->
+      <ul class="fl">
+        <li class="fl"><a href="#home" class="active">Home</a></li>
+        <li class="fl"><a href="#news">News</a></li>
+        <li class="fl"><a href="#contact">Contact</a></li>
+        <li class="fl"><a href="#about">About</a></li>
+      </ul>
       
 </body>
 </html>
