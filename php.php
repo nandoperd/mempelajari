@@ -69,6 +69,53 @@ echo "<br>";
 myStatic();
 echo "<br>";
 myStatic();
-?> 
+?>
 
+<!-- data type -->
 
+<?php
+// string : urutan karakter
+$x = "Hello world!"; //string
+
+// integer : angka non desimal
+$y = 7070; //integer, tidak perlu diiringi kutip
+
+// float : angka yang memiliki desimal
+$z = 10.999; //float
+
+//boolean : true atau false
+$b = true; //boolean
+
+//array : dapat menyimpan banyak nilai dalam satu variabel tunggal
+$kopi = array("espresso", "americano", "latte"); //$kopi menampung banyak nilai
+
+echo $x;
+echo var_dump($y); //menampilkan tipe dan nilai data
+echo var_dump($z); 
+echo var_dump($kopi); 
+
+?>
+<br>
+
+<?php
+//object : object pasti berurusan dengan class, class adalah wadah yang menampung objek tersebut
+class Motor { //deklarasi class motor
+    public $merk; //deklarasi objek-objek class motor
+    public $warna;
+    public function __construct($merk, $warna) //dengan fungsi __construct(), PHP akan secara otomatis memanggil fungsi ini saat Anda membuat objek dari kelas
+    {
+        // Variabel $this merupakan variabel khusus PHP dalam OOP yang digunakan untuk menunjuk sebuah objek, ketika kita mau mengaksesnya dalam sebuah class.
+        // $this juga sering disebut dengan pseuo-variable.
+        $this->merk = $merk;
+        $this->warna = $warna;
+    }
+    public function message(){ //membuat function message
+        return "Motor Gua " . $this->merk . " " . $this->warna . "!"; 
+    }
+}
+$motorKu = new Motor("Megapro", "Putih");
+echo $motorKu -> message();
+echo "<br>";
+$motorKu = new Motor("Supra", "Item");
+echo $motorKu -> message();
+?>
