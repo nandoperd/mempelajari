@@ -523,3 +523,99 @@ a:link.link {
     /* mengaktifkan garis scroll vertical */
     overflow-y: scroll;
   }
+
+  /* float */
+  /* ini biasanya gua gunain buat memposisikan elemen */
+  img.f {
+    float: right;
+    width: 90px;
+  }
+
+  div {
+    border: 3px solid #4CAF50;
+    padding: 5px;
+  }
+
+  /* menghapus float sebelumnya dengan clear */
+  .f1 {
+    float: left;
+    padding: 10px;
+    border: 3px solid #73AD21;
+  }
+  
+  .f2 {
+    padding: 10px;
+    border: 3px solid red;
+  }
+  
+  .f3 {
+    float: left;
+    padding: 10px;  
+    border: 3px solid #73AD21;
+  }
+  
+  .f4 {
+    padding: 10px;
+    border: 3px solid red;
+    clear: left;
+  }
+
+  /* menghapus float dengan clearfix merubah overflow menjadi auto */
+  .clearfix {
+    overflow: auto;
+  }
+
+  /* clearfix yang lebih modern */
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  /* beberapa contoh float */
+  /* float menu */
+  .box {
+    float: left;
+    width: 33.33%;
+    padding: 50px;
+  }
+
+  /* float gambar */
+  .img-container {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+  }
+
+  /* float nav */
+  ul.fl {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  li.fl {
+    float: left;
+  }
+  
+  li.fl a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  li.fl a:hover {
+    background-color: #111;
+  }
+  
+  .active {
+    background-color: red;
+  }
+
+  /* referensi float lainnya : https://www.w3schools.com/css/tryit.asp?filename=trycss_layout_cols */
+  
+
