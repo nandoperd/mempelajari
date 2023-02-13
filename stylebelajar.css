@@ -634,5 +634,10 @@ a:link.link {
     font-size: 20px;
     padding: 20px;
   }
-  
 
+  /* css combinators */
+/* ada 4 kombinator :
+descendant selector (spasi) : contohnya seperti div p { ... } berarti css setiap p
+child selector (>) : contohnya seperti div > p { ... } berarti css setiap p yang ada di dalam div
+adjacent sibling selector (+) : contohnya seperti div + p { ... } berarti css p yang terdekat setelah div (hanya setelahnya saja)
+general sibling selector (~) : contohnya seperti div ~ p { ... } css semua p setelah div  */
