@@ -641,3 +641,63 @@ descendant selector (spasi) : contohnya seperti div p { ... } berarti css setiap
 child selector (>) : contohnya seperti div > p { ... } berarti css setiap p yang ada di dalam div
 adjacent sibling selector (+) : contohnya seperti div + p { ... } berarti css p yang terdekat setelah div (hanya setelahnya saja)
 general sibling selector (~) : contohnya seperti div ~ p { ... } css semua p setelah div  */
+
+/* pseudo class : kelas semu (digunakan untuk menentukan keadaan khusus suatu elemen)*/
+/* contoh */
+.pseudo p {
+  display: none;
+  background-color: seagreen;
+  color: #ddd;
+  font-size: large;
+  padding: 20px;
+}
+.pseudo:hover p {
+  display: block;
+}
+
+/* contoh :first-child (digunakan untuk setiap elemen pertama) */
+.fc p:first-child {
+  color: burlywood;
+}
+
+.fcc p i:first-child {
+  color: mediumseagreen;
+} 
+
+/* referensi pseudo class : https://www.w3schools.com/css/css_pseudo_classes.asp */
+
+/* pseudo element : bedanya dari class dia memakai 2 titik 2 */
+.ps p::first-line {
+  color: rebeccapurple;
+  font-variant: small-caps;
+}
+.ps p::first-letter {
+  color: #ff0000;
+  font-size: xx-large;
+}
+
+/* sebelum, bisa juga dengan sesudah (after) */
+.ps h1::before {
+  content: url(img/download.png);
+}
+
+/* marker (merubah elemen seperti ul ol li) */
+::marker {
+  color: #04AA6D;
+}
+
+/* selection (merubah text yang diblok) */
+::selection {
+  color: aquamarine;
+  background: mediumseagreen;
+}
+/* referensi pseudo element : https://www.w3schools.com/css/css_pseudo_elements.asp */
+
+/* opacity */
+.opa img {
+  opacity: 0.5;
+}
+
+.opa img:hover {
+  opacity: 1.0;
+}
