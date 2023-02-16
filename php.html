@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar PHP</title>
+    <style>
+        body {
+            background-image: url(img/bg1.jpg);
+            background-size: 100%;
+        }
+        .border {
+            border: 2px solid silver;
+            border-radius: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: large;
+            text-align: center;
+            color: antiquewhite;
+            background-color: mediumturquoise;
+        }
+
+        /* dropdown */
+        .dropbtn {
+        background-color: mediumturquoise;
+        color: white;
+        /* padding: 16px;
+        font-size: 16px; */
+        border: none;
+        cursor: pointer;
+        }
+
+        .dropbtn:hover {
+            color: royalblue;
+        }
+
+        .dropdown {
+        position: center;
+        display: inline-block;
+        }
+
+        .dropdown-content {
+        display: none;
+        /* position: fixed; */
+        background-color: mediumturquoise;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        border-radius: 20px;
+        }
+
+        .dropdown-content a {
+        color: whitesmoke;
+        padding: 12px 12px;
+        text-decoration: none;
+        display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: silver;
+            border-radius: 20px;
+        }
+
+        .dropdown:hover .dropdown-content {
+        display: block;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="border">
+        <div class="dropdown">
+            <button class="dropbtn"><h1>PHP</h1></button>
+            <div class="dropdown-content">
+                <a href="php/php.php" target="_blank">php (w3schools)</a>
+                </div>
+        </div>
+    
+</body>
+</html>
