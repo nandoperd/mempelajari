@@ -953,3 +953,53 @@ h4::before {
 .imp {
   background-color: #04AA6D !important;
 }
+
+/* referensi math function  : https://www.w3schools.com/css/css_math_functions.asp */
+
+/* rounded corners */
+#rcorners {
+  border-radius: 25px;
+  background: url(img/kertas.jpg);
+  background-position: left top;
+  background-repeat: repeat;
+  padding: 20px; 
+  width: 200px;
+  height: 150px;  
+}
+
+#rcorners1 {
+  border-radius: 15px 50px;
+  background: #73AD21;
+  padding: 20px; 
+  width: 200px;
+  height: 150px; 
+} 
+
+#rcorners2 {
+  border-radius: 50px / 15px;
+  background: #73AD21;
+  padding: 20px; 
+  width: 200px;
+  height: 150px; 
+}
+
+#rcorners3 {
+  border-radius: 50%;
+  background: #73AD21;
+  padding: 20px; 
+  width: 200px;
+  height: 150px;
+  text-align: center;
+} 
+
+/* border images */
+#borderimg { 
+  border: 10px solid transparent;
+  padding: 15px;
+  /* border-image: url(img/border.png) 30 round; */
+  /*stretch*/
+  /* border-image: url(img/border.png) 30 stretch; */
+  /* border-image: url(img/border.png) 50 round; */
+  /* border-image: url(img/border.png) 20% round; */
+  border-image: url(img/border.png) 30% round; 
+}
