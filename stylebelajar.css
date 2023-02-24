@@ -1127,3 +1127,58 @@ h4::before {
 }
 
 /* referensi gradient background : https://www.w3schools.com/css/css3_gradients.asp */
+
+/* card */
+.card {
+  width: 250px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
+
+.cardo {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  font-size: 40px;
+}
+
+.cardi {
+  padding: 10px;
+}
+
+.kartu {
+  width: 250px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
+
+.karti {
+  padding: 10px;
+}
+
+/* text overflow */
+/* ellipsis akan memangkas text di dalam border jika sekiranya text berlebihan */
+p.clip {
+  white-space: nowrap; 
+  width: 200px; 
+  border: 1px solid #000000;
+  overflow: hidden;
+  /* text-overflow: clip; */
+  text-overflow: ellipsis;
+}
+
+/* vertical text */
+p.verti {
+  writing-mode: vertical-rl; 
+}
+
+/* font face */
+/* memanggil font milik kita sendiri */
+@font-face {
+  font-family: myFirstFont;
+  src: url(Montserrat-Medium.ttf);
+}
+
+* {
+  font-family: myFirstFont;
+}
