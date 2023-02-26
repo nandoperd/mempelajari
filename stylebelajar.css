@@ -1182,3 +1182,121 @@ p.verti {
 * {
   font-family: myFirstFont;
 }
+
+/* 2D Transform */
+/* info : deg berarti degradasi */
+/* berikut metode-metode 2D transform */
+/* translate()
+rotate()
+scaleX()
+scaleY()
+scale()
+skewX()
+skewY()
+skew()
+matrix() */
+.duad {
+  width: 300px;
+  height: 100px;
+  background-color: mediumspringgreen;
+  border: 1px solid mediumseagreen;
+  transform: translate(50px,100px);
+  /* translate untuk memindahkan elemen dari posisinya saat ini
+  artinya pindahkan 50 piksel ke kanan, dan 100 piksel ke bawah dari posisinya saat ini  */
+  transform: rotate(20deg);
+  /* transform: rotate(-20deg); */
+  /* rotate() memutar elemen searah jarum jam atau berlawanan arah jarum jam sesuai dengan
+   derajat yang diberikan */
+   /* transform: scale(2, 3);
+   transform: scale(0.5,0.5); */
+   /* scale menambah atau mengurangi ukuran elemen (sesuai dengan parameter yang diberikan
+   untuk lebar dan tinggi)
+   artinya naikkan 2 kali dan tinggi 3 kali dari ukuran aslinya */
+   transform: scaleX(2);
+   transform: scaleX(0.5);
+   /* scaleX untuk menambah atau mengurangi lebar elemen (X : horizontal) */
+   transform: scaleY(0.5);
+   /* scaleY untuk vertical */
+   transform: skewX(20deg);
+   transform: skewY(20deg);
+   /* skew (X/Y) untuk memiringkan elemen sepanjang sumbu X/Y dengan sudut tertentu */
+   transform: skew(20deg, 10deg);
+   /* dengan skew seperti ini artinya sebelah kiri X dan kanan Y */
+   transform: matrix(1, -0.3, 0, 1, 0, 0);
+   /* matrix menggabungkan semua metode transformasi 2D menjadi satu
+   matrix mengambil enam parameter, yang berisi fungsi matematika, yang memungkinkan untuk memutar,
+   menskalakan, memindahkan , dan memiringkan elemen
+   urutan/Parameternya adalah sebagai berikut: 
+   matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY()) */
+  }
+   /* 3D Transform */
+   /* berikut metode-metode 3D transform */ 
+   /* rotateX()
+   rotateY()
+   rotateZ() */
+  
+.tigad {
+  width: 300px;
+  height: 100px;
+  background-color: mediumspringgreen;
+  border: 1px solid mediumseagreen;
+  transform: rotateX(150deg);
+  /* rotateX memutar elemen di sekitar sumbu X pada derajat tertentu */
+  transform: rotateY(150deg);
+  /* rotateY untuk sumbu Y (vertical) */
+  transform: rotateZ(90deg);
+  /* rotateZ untuk sumbu Z */
+
+}
+
+/* transition */
+/* berikut elemen-elemennya */
+/* transition
+transition-delay
+transition-duration
+transition-property
+transition-timing-function */
+/* Untuk membuat efek transisi, harus menentukan dua hal: efek pada properti CSS dan durasi efeknya
+Info: Jika durasi kosong, transisi tidak akan berpengaruh, karena nilai defaultnya adalah 0. */
+.transisi {
+  width: 100px;
+  height: 100px;
+  background: mediumorchid;
+  transition: width 2s;
+}
+.transisi:hover {
+  /* width dan height */
+  width: 300px;
+  height: 300px;
+  /* speed */
+  /* linear : efek transisi dengan kecepatan yang sama dari awal hingga akhir */
+  /* transition-timing-function: linear; */ 
+
+  /* ease : efek transisi dengan awal yang lambat, lalu cepat, lalu berakhir perlahan (ini default) */
+  /* transition-timing-function: ease; */
+
+  /* ease-in : efek transisi dengan awal yang lambat */
+  /* transition-timing-function: ease-in; */
+
+  /* ease-out : efek transisi dengan akhir yang lambat */
+  /* transition-timing-function: ease-out; */
+
+  /* ease-in-out : efek transisi dengan awal dan akhir yang lambat */
+  transition-timing-function: ease-in-out;
+
+  /* delay */
+  transition-delay: 1s;
+}
+
+  /* Transition + Transformation */
+  .trans {
+    width: 100px;
+    height: 100px;
+    background: mediumorchid;
+    transition: width 2s, height 2s, transform 2s;
+  }
+  .trans:hover {
+    width: 300px;
+    height: 300px;
+    transform: rotate(180deg);
+  }
