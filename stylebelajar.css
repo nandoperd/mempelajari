@@ -1300,3 +1300,126 @@ Info: Jika durasi kosong, transisi tidak akan berpengaruh, karena nilai defaultn
     height: 300px;
     transform: rotate(180deg);
   }
+
+  /* Animasi */
+  /* properti-properti animasi : */
+  /* 
+  @keyframes : bagian yang penting dalam membuat animasi CSS
+  animation-name
+  animation-duration
+  animation-delay
+  animation-iteration-count
+  animation-direction
+  animation-timing-function
+  animation-fill-mode
+  animation */
+  .animasi {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: contoh;
+    animation-duration: 4s; /*default nya adalah 0 jika tidak diisi*/
+  }
+  @keyframes contoh {
+    /* menggunakan metode from dan to */
+    from {background-color: red;}
+    to {background-color: yellow;}
+  }
+
+  .animasi2 {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: conto;
+    animation-duration: 4s;
+  }
+  @keyframes conto {
+    /* menggunakan metode persen (0% start 100% finish) */
+    0%   {background-color: tomato;}
+    25%  {background-color: yellow;}
+    50%  {background-color: blue;}
+    100% {background-color: green;}
+  }
+
+  .animasi3 {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    animation-name: cont;
+    animation-duration: 4s;
+    animation-delay: 1s;
+    /* menggunakan animation-delay dengan angka negatif, animasi akan berjalan dari animasi ke 3. karena delaynya
+    adalah -2 */
+    /* animation-delay: -2s; */
+    /* mengatur waktu berapa kali animasi berjalan */
+    /* animation-iteration-count: 3; */
+    /* infinite untuk menjalankan animasi tanpa henti */
+    animation-iteration-count: infinite;
+    /* arah animasi, menentukan gerakan animasi. nilainya bisa normal, reverse, alternate, atau alternate-reverse */
+    animation-direction: reverse; /*kebalikan*/
+    animation-direction: alternate; /*putaran awal ke depan, putaran kedua ke belakang*/
+    animation-direction: alternate-reverse; /*putaran awal ke belakang, putaran kedua ke depan*/
+    /* speed, untuk mengatur speed : linear, ease, ease-in, ease-out, ease-in-out */
+    animation-timing-function: ease;
+    /* mode, mengatur kapan efek animasi berjalan : none, forwards, backwards, dan both  */
+    animation-fill-mode: forwards;
+    animation-fill-mode: backwards;
+    animation-delay: 1s;
+    animation-fill-mode: both;
+  }
+  @keyframes cont {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;}
+  }
+
+  .animasi4 {
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    background-color: red;
+    position: relative;
+    animation-name: example;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+  @keyframes example {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;}
+  }
+
+  /* Tooltip */
+  .tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+  }
+
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+  }
+
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+
+  /* referensi tooltip : https://www.w3schools.com/css/css_tooltip.asp */
