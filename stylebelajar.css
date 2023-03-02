@@ -1423,3 +1423,96 @@ Info: Jika durasi kosong, transisi tidak akan berpengaruh, karena nilai defaultn
   }
 
   /* referensi tooltip : https://www.w3schools.com/css/css_tooltip.asp */
+
+  /* style image */
+  /* rounded */
+  .bulet {
+    border-radius: 50px;
+  }
+
+  /* thumbnail */
+  .thumbnail {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 150px;
+  }
+  
+  .thumbnail:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+  }
+
+  .tgh {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  } 
+  
+  /* filter */
+  img {
+    width: 33%;
+    height: auto;
+    float: left; 
+    max-width: 235px;
+  }
+  
+  .blur {filter: blur(4px);}
+  .brightness {filter: brightness(250%);}
+  .contrast {filter: contrast(180%);}
+  .grayscale {filter: grayscale(100%);}
+  .huerotate {filter: hue-rotate(180deg);}
+  .invert {filter: invert(100%);}
+  .opacity {filter: opacity(50%);}
+  .saturate {filter: saturate(7);}
+  .sepia {filter: sepia(100%);}
+  .shadow {filter: drop-shadow(8px 8px 10px green);}
+
+  /* image hover overlay */
+  .containo {
+    position: relative;
+    width: 50%;
+  }
+  
+  .imago {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  .overlayo {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    background-color: #008CBA;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+  }
+
+  .containo:hover .overlayo {
+    bottom: 0;
+    height: 100%;
+  }
+  
+  .textoo {
+    white-space: nowrap; 
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
+
+  /* flip image */
+  .kebolak:hover {
+    transform: scaleX(-1);
+  } 
+
+  /* referensi style image : https://www.w3schools.com/css/css3_images.asp */
+
+  /* cermin gambar */
