@@ -1,0 +1,1992 @@
+/* Halo, ini adalah catatan belajar css saya, css ini akan menjadi source dari halaman belajar.html ya */
+/* berikut adalah struktur dari penulisan CSS
+   selektor {
+        properti: nilai;
+   }
+*/
+
+.judul {
+  height: auto;
+  width: fit-content;
+  color: mediumseagreen;
+  border-bottom: 1px solid;
+}
+
+.tengah {
+  text-align: center;
+}
+
+/* pada contoh di bawah ini, h6 dan p memiliki properti yang sama */
+h6,p {
+    color: rgb(82, 82, 82);
+    font-size: 15px;
+}
+
+/* border memiliki rumus seperti ini : border A B C;
+A adalah ukuran ketebalan bordernya
+B adalah jenis dari border
+C adalah warna dari border */
+h4 {
+    border: 1px solid mediumaquamarine;
+    /* border-style: dashed; */
+    /* border-top  : 1ch; */
+    border-radius: 0%;
+    border-width: 2px;
+    /* border-color: mediumvioletred; */
+}
+
+/* garis border */
+p.solid {border-style: solid;}
+p.dotted {border-style: dotted;}
+p.dashed {border-style: dashed;}
+p.double {border-style: double;}
+p.groove {border-style: groove;}
+p.ridge {border-style: ridge;}
+p.inset {border-style: inset;}
+p.outset {border-style: outset;}
+p.none {border-style: none;}
+p.hidden {border-style: hidden;}
+p.mix {border-style: dotted dashed solid double;}
+
+/* posisi border */
+p.top {border-top: 10px solid green;}
+
+/* border radius memungkinkan untuk memperindah box seperti diberi lengkungan */
+p.lengkungan {
+    border: 2px solid saddlebrown;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* padding */
+p.puding {
+    border: 1px solid mediumblue;
+    padding: 5px;
+}
+
+/* Setiap sisi, bisa mempunyai padding yang berbeda. Ada dua cara:
+    memberi 4 nilai di padding
+    memberi properti detail padding-(arah) */
+.empat {
+    border: 1px solid violet;
+    padding: 10px 5px 2px 20px;
+}
+.semua {
+    border: 1px solid purple;
+    padding-top: 5px;
+    padding-right: 10px;
+    padding-bottom: 15px;
+    padding-left: 25px;
+}
+p.tengah {
+    text-align: center;
+}
+p.gede {
+    font-size: 300%;
+}
+
+/*   universal css, * memiliki arti bahwa semua elemen html diatur oleh * , contoh di bawah ini : */
+/* * {
+    font-size: 100%;
+} */
+/* penjelasan multiple stylesheet : 
+jika ada banyak css, maka css yang dipanggil adalah yang paling terakhir atau paling bawah yang akan menimpa
+data css sebelumnya. contoh, jika css internal ditulis di bawah link rel ="external.css" , maka yang internal 
+lah yang akan dipanggil */
+/* Urutan prioritas CSS : 
+1. Inline style (inside an HTML element)
+2. External and internal style sheets (in the head section)
+3. Browser default */
+
+/* Background */
+/* background-color
+background-image
+background-repeat
+background-attachment
+background-position
+background (shorthand property) */
+
+.opacity {
+    background-color: mediumaquamarine;
+    opacity: 0.3;
+}
+/* catatan, jika kita memakai opacity maka tulisan di bawahnya akan mengikut dan membuat tulisan jadi susah dibaca */
+
+/* contoh background repeat */
+/* body {
+    background-image: url(img/bg1.jpg);
+    background-repeat: repeat-x;
+    background-repeat: no-repeat;
+    background-position: right;
+    margin-right: 500px;
+} */
+
+/* background attachment */
+/* body {
+    background-image: url(img/bg1.jpg);
+    tetap
+    background-attachment: fixed; 
+    scroll
+    background-attachment: scroll; 
+} */
+
+/* border-width */
+p.borderwidth {
+    border-style: solid;
+    border-width: 5px 20px; /* 5px atas dan bawah, 20px kanan kiri */
+  }
+
+/* border-color */
+p.solidgreen {
+    border-style: solid;
+    border-color: mediumseagreen;
+  } 
+  
+  p.dottedblue {
+    border-style: dotted;
+    border-color: mediumblue;
+  } 
+
+/* individual side border */
+p.individual {
+    border-top-style: dotted;
+    border-right-style: solid;
+    border-bottom-style: dotted;
+    border-left-style: solid;
+  }
+
+  p.individual2 {
+    border-style: dotted solid;
+  }
+
+  /* penjelasan : 
+  jika ada 4  value seperti ini -> border-style: dotted solid double dashed;
+    maka,       top border is dotted
+                right border is solid
+                bottom border is double
+                left border is dashed
+
+   jika ada 3 value seperti ini -> border-style: dotted solid double;
+    maka,       top border is dotted
+                right and left borders are solid
+                bottom border is double
+
+    jika ada 2 value seperti ini -> border-style: dotted solid;
+    maka,       top and bottom borders are dotted
+                right and left borders are solid
+                If the border-style property has one value:
+
+    jika ada 1 value seperti ini ->border-style: dotted;
+    maka,       all four borders are dotted
+*/
+
+p.kiri {
+    border-left: 6px solid tomato;
+}
+
+.hw {
+    height: 30px;
+    width: 50%;
+    border: 5px solid saddlebrown;
+}
+
+/* outline, outline adalah garis di luar border */
+p.dotted-o {outline-style: dotted;}
+p.dashed-o {outline-style: dashed;}
+p.solid-o {outline-style: solid;}
+p.double-o {outline-style: double;}
+p.groove-o {outline-style: groove;}
+p.ridge-o {outline-style: ridge;}
+p.inset-o {outline-style: inset;}
+p.outset-o {outline-style: outset;}
+
+/* outline width ada berbagai macam : thin,medium,thick atau specific size */
+p.outline-w {
+    border: 1px solid black;
+    outline-style: solid;
+    outline-color: mediumseagreen;
+    /* outline-width: thin; */
+    outline-width: medium;
+    /* outline-width: thick; */
+    /* outline-width: 6px; */
+  }
+
+/* outline ringkas */
+p.outline-s {outline: thick ridge pink;}
+
+/* outline offset, memberi jarak antar border */
+p.offset {
+    margin: 30px;
+    border: 1px solid black;
+    outline: 1px solid red;
+    outline-offset: 15px;
+  }
+
+/* Text */
+.text {
+    text-align: center;
+    text-transform: uppercase;
+}
+p.texto {
+    text-indent: 50px;
+    text-align: justify;
+    letter-spacing: 2px;
+}
+a.texti {
+    text-decoration: overline;
+    color: royalblue;
+}
+p.text-a {
+    text-align-last: right;
+    text-align-last: left;
+}
+
+/* membuat text menjadi terbalik memakai direction rtl */
+p.text-b {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+  }
+
+/* vertical align */
+img.va {
+    /* vertical-align: baseline; */
+    /* vertical-align: text-top; */
+    /* vertical-align: text-bottom; */
+    /* vertical-align: sub; */
+    vertical-align: super;
+}
+
+/* text-decoration */
+p.text-d {
+    /* text-decoration: overline; */
+    /* text-decoration: line-through; */
+    /* text-decoration: underline; */
+    text-decoration: overline underline;
+    text-decoration-color: red;
+    /* text-decoration-style: dotted;  */
+    text-decoration-style: wavy;
+    text-decoration-thickness: 3px;
+}
+p.text-ds {
+    text-decoration: underline burlywood dotted 2px;
+}
+a.tanpagaris {
+    text-decoration: none;
+    color: forestgreen;
+}
+
+/* transformation */
+p.text-transform {
+    /* text-transform: uppercase; */
+    /* text-transform: lowercase; */
+    /* huruf kapital di depan kata */
+    text-transform: capitalize;
+}
+
+/* spacing */
+p.text-space {
+    /* memberi jarak di awal kalimat */
+    /* text-indent: 50px; */
+
+    /* jarak antar huruf */
+    /* letter-spacing: 3px; */
+
+    /* jarak antar baris */
+    /* line-height: 2.0; */
+
+    /* jarak antar kata */
+    word-spacing: 3px;
+
+    /* spasi berlanjut terus-menerus */
+    /* white-space: nowrap; */
+}
+
+/* text-shadow */
+p.text-shadow {
+    /* jika 2 seperti di bawah ini menunjukkan horizontal 3px vertical 2px */
+    /* text-shadow: 3px 2px; */
+
+    /* text shadow warna */
+    /* text-shadow: 3px 2px red; */
+
+    /* di bawah ini 5px adalah blur */
+    /* text-shadow: 3px 2px 5px red; */
+
+    /* contoh */
+    /* color: white;
+    text-shadow: 2px 2px 4px #000000;
+
+    text-shadow: 0 0 3px #FF0000;
+
+    text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF; */
+
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+
+/* fonts */
+p.serif {
+    font-family: 'Times New Roman', Times, serif;
+}
+p.s-serif {
+    font-family: Arial, Helvetica, sans-serif;
+}
+p.monospace {
+    font-family: 'Courier New', Courier, monospace;
+}
+p.cursive {
+    font-family: "Brush Script MT", cursive;
+}
+p.fantasy {
+    font-family: Copperplate, Papyrus, fantasy;
+}
+p.variant {
+        font-variant: small-caps;
+}
+
+/* shorthand font */
+p.font-s {
+    font: 20px Arial, sans-serif;
+    /* font: italic small-caps bold 12px/30px Georgia, serif; */
+}
+
+/* link */
+/* a:link - a normal, link yang belum dikunjungi
+a:visited - a link yang sudah dikunjungi user
+a:hover - a link ketika cursor mengarah ke link tersebut
+a:active - a link ketika diklik */
+
+/* aturannya : 
+a:hover MUST come after a:link and a:visited
+a:active MUST come after a:hover */
+
+/* contoh css link warna, tampilan. dan warna background.
+   di bawah ini sengaja dibuat class agar link lain tidak terdistrak  */
+
+/* unvisited link */
+a:link.link {
+    color: red;
+    text-decoration: none;
+    background-color: yellowgreen;
+  }
+  
+  /* visited link */
+  a:visited.link {
+    color: green;
+    text-decoration: none;
+    background-color: cyan;
+  }
+  
+  /* mouse over link */
+  a:hover.link {
+    color: hotpink;
+    text-decoration: underline;
+    background-color: teal;
+  }
+  
+  /* selected link */
+  a:active.link {
+    color: blue;
+    text-decoration: underline;
+    background-color: skyblue;
+  }
+
+  a:link.button, a:visited.button {
+    background-color: #f44336;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  a:hover.button, a:active.button {
+    background-color: red;
+  }
+
+  a:link.button2, a:visited.button2 {
+    background-color: white;
+    color: black;
+    border: 2px solid green;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  a:hover.button2, a:active.button2 {
+    background-color: green;
+    color: white;
+  }
+
+  /* list */
+  ul.a {
+    list-style-type: circle;
+  }
+  
+  ul.b {
+    list-style-type: square;
+  }
+  ul.c {
+    list-style-image: url('img/kotak.png');
+  }
+
+  ul.d {
+    list-style-position: outside;
+  }
+  
+  ul.e {
+    list-style-position: inside;
+  }
+
+  /* contoh ul lainnya */
+  ul.f {
+    border-left: 5px solid red;
+    background-color: #f1f1f1;
+    list-style-type: none;
+    padding: 10px 20px;
+  }
+
+  ul.g{
+    list-style-type: none;
+    padding: 0;
+    border: 1px solid #ddd;
+  }
+  
+  ul.g li {
+    padding: 8px 16px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  ul.g li:last-child {
+    border-bottom: none
+  }
+
+  /* tabel */
+  #tabel {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #tabel td, #tabel th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    /* contoh alignment */
+    text-align: center;
+    vertical-align: center;
+  }
+  
+  /* tabel selang-seling warna background (zebra) */
+  #tabel tr:nth-child(even){background-color: #f2f2f2;}
+  
+  /* tabel berwrna background ketika kursor diarahkan */
+  #tabel tr:hover {background-color: coral;}
+  
+  #tabel th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+    color: white;
+  }
+
+  /* tabel responsif */
+  table.r {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {background-color: #f2f2f2;}
+
+  /* display */
+  /* pada dasarnya html/css memiliki elemen inline dan blockline, dengan display kita bisa merubah yang tadinya ,inline 
+  menjadi blockline dan sebaliknya   */
+  /* ada beberapa atribut display diantaranya : block, none, hidden, dll */
+  li.dis {
+    display: inline;
+  }
+
+  /* posisi */
+  /* bisa lihat disini : https://www.w3schools.com/css/css_positioning.asp */
+
+  /* overflow */
+  /* overflow digunakan untuk memerintahkan apa yang dapat dilakukan jika tampilan melebihi size pada elemen di web */
+  /* contoh */
+  .ov {
+    background-color: mediumspringgreen;
+    width: 200px;
+    height: 85px;
+    border: 1px solid;
+    /* overflow default biasanya visible, jadi melewati begitu saja */
+    /* overflow: visible;  */
+    /* overflow: scroll; */
+    /* overflow: hidden; */
+    overflow: auto;
+
+    /* menghilangkan garis scroll horizontal */
+    overflow-x: hidden;
+    /* mengaktifkan garis scroll vertical */
+    overflow-y: scroll;
+  }
+
+  /* float */
+  /* ini biasanya gua gunain buat memposisikan elemen */
+  img.f {
+    float: right;
+    width: 90px;
+  }
+
+  /* div {
+    border: 3px solid #4CAF50;
+    padding: 5px;
+  } */
+
+  /* menghapus float sebelumnya dengan clear */
+  .f1 {
+    float: left;
+    padding: 10px;
+    border: 3px solid #73AD21;
+  }
+  
+  .f2 {
+    padding: 10px;
+    border: 3px solid red;
+  }
+  
+  .f3 {
+    float: left;
+    padding: 10px;  
+    border: 3px solid #73AD21;
+  }
+  
+  .f4 {
+    padding: 10px;
+    border: 3px solid red;
+    clear: left;
+  }
+
+  /* menghapus float dengan clearfix merubah overflow menjadi auto */
+  .clearfix {
+    overflow: auto;
+  }
+
+  /* clearfix yang lebih modern */
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  /* beberapa contoh float */
+  /* float menu */
+  .box {
+    float: left;
+    width: 33.33%;
+    padding: 50px;
+  }
+
+  /* float gambar */
+  .img-container {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+  }
+
+  /* float nav */
+  ul.fl {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  li.fl {
+    float: left;
+  }
+  
+  li.fl a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  li.fl a:hover {
+    background-color: #111;
+  }
+  
+  .active {
+    background-color: red;
+  }
+
+  /* referensi float lainnya : https://www.w3schools.com/css/tryit.asp?filename=trycss_layout_cols */
+
+  /* display */
+  /* display inline dan inline-block */
+  /* contoh nav menggunakan display inline-block */
+  .nav {
+    background-color: yellow; 
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav li {
+    display: inline-block;
+    font-size: 20px;
+    padding: 20px;
+  }
+
+  /* css combinators */
+/* ada 4 kombinator :
+descendant selector (spasi) : contohnya seperti div p { ... } berarti css setiap p
+child selector (>) : contohnya seperti div > p { ... } berarti css setiap p yang ada di dalam div
+adjacent sibling selector (+) : contohnya seperti div + p { ... } berarti css p yang terdekat setelah div (hanya setelahnya saja)
+general sibling selector (~) : contohnya seperti div ~ p { ... } css semua p setelah div  */
+
+/* pseudo class : kelas semu (digunakan untuk menentukan keadaan khusus suatu elemen)*/
+/* contoh */
+.pseudo p {
+  display: none;
+  background-color: seagreen;
+  color: #ddd;
+  font-size: large;
+  padding: 20px;
+}
+.pseudo:hover p {
+  display: block;
+}
+
+/* contoh :first-child (digunakan untuk setiap elemen pertama) */
+.fc p:first-child {
+  color: burlywood;
+}
+
+.fcc p i:first-child {
+  color: mediumseagreen;
+} 
+
+/* referensi pseudo class : https://www.w3schools.com/css/css_pseudo_classes.asp */
+
+/* pseudo element : bedanya dari class dia memakai 2 titik 2 */
+.ps p::first-line {
+  color: rebeccapurple;
+  font-variant: small-caps;
+}
+.ps p::first-letter {
+  color: #ff0000;
+  font-size: xx-large;
+}
+
+/* sebelum, bisa juga dengan sesudah (after) */
+.ps h1::before {
+  content: url(img/download.png);
+}
+
+/* marker (merubah elemen seperti ul ol li) */
+::marker {
+  color: #04AA6D;
+}
+
+/* selection (merubah text yang diblok) */
+::selection {
+  color: aquamarine;
+  background: mediumseagreen;
+}
+/* referensi pseudo element : https://www.w3schools.com/css/css_pseudo_elements.asp */
+
+/* opacity */
+.opa img {
+  opacity: 0.5;
+}
+
+.opa img:hover {
+  opacity: 1.0;
+}
+
+/* opacity transparant box */
+div.bg {
+  background: url(img/nandoperd.png) repeat;
+  border: 1px solid  burlywood;
+  /* background-image: url(img/nandoperd.png); */
+}
+div.opac {
+  margin: 30px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  border-radius: 10px;
+  opacity: 0.6;
+}
+div.opac p {
+  margin: 5%;
+  font-weight: bold;
+  color: #000000;
+  text-align: center;
+}
+
+/* navbar */
+/* referensi bisa dicek di : https://www.w3schools.com/css/css_navbar.asp */
+ul.sticky {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  /* position: -webkit-sticky; Safari */
+  position: sticky; /*posisi sticky untuk membuat menu akan tetap terlihat ketika discroll, bisa juga dengan position : fixed*/
+  top: 0;
+}
+
+li.sticky {
+  float: left;
+}
+
+li.sticky a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li.sticky a:hover {
+  background-color: skyblue;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
+/* dropdown */
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+/* css gallery images */
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+/* yang responsif */
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* refernsi image sprites : https://www.w3schools.com/css/css_image_sprites.asp */
+/* image sprites biasanya digunakan untuk memanggil gambar/icon dengan id agar tidak banyak code */
+
+/* referensi attribute selectors : https://www.w3schools.com/css/css_attribute_selectors.asp */
+/* digunakan untuk mempersingkat code dengan mendeklarasikan atribut pada css */
+/* contoh */
+a[target="_blank"] {
+  background-color: yellow;
+} /*setiap target yang memiliki target blank akan berbackground kuning*/
+
+/* form */
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* form input menggunakan focus */
+input[type=text]:focus {
+  background-color: greenyellow;
+}
+
+div.form {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+/* menggunakan icon dan transition */
+input[type=number] {
+  width: 130px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('img/download.png');
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  transition: width 0.4s ease-in-out;
+}
+
+input[type=number]:focus {
+  width: 100%;
+}
+
+/* css counter (untuk mengisi angka otomatis) */
+body {
+  counter-reset: section;
+}
+
+h6::before {
+  counter-increment: section;
+  content: "BAB " counter(section) ": ";
+}
+/*catatan : counter dari css ini berbeda dengan text lainnya, dia tidak bisa diblok*/
+
+/* contoh css counter sub nomor */
+/* body {
+  counter-reset: section;
+}
+
+h4 {
+  counter-reset: subsection;
+}
+
+h5::before {
+  counter-increment: section;
+  content: "Section " counter(section) ". ";
+}
+
+h4::before {
+  counter-increment: subsection;
+  content: counter(section) "." counter(subsection) " ";
+} */
+/* dikomen karena web ini sudah berantakan hehe nanti jadi ga rapih */
+
+/* css specificity : jika ada 2 atau lebih css, maka yang terkuat yang akan dieksekusi */
+/* spesifik css > css dalam head > css link */
+/* id > class > css elemen pada head */
+/* jika beberapa css memiliki kekuatan yang sama, css yang paling bawah yang akan dieksekusi  */
+
+/* !important */
+.imp {
+  background-color: #04AA6D !important;
+}
+
+/* referensi math function  : https://www.w3schools.com/css/css_math_functions.asp */
+
+/* rounded corners */
+#rcorners {
+  border-radius: 25px;
+  background: url(img/kertas.jpg);
+  background-position: left top;
+  background-repeat: repeat;
+  padding: 20px; 
+  width: 200px;
+  height: 150px;  
+}
+
+#rcorners1 {
+  border-radius: 15px 50px;
+  background: #73AD21;
+  padding: 20px; 
+  width: 200px;
+  height: 150px; 
+} 
+
+#rcorners2 {
+  border-radius: 50px / 15px;
+  background: #73AD21;
+  padding: 20px; 
+  width: 200px;
+  height: 150px; 
+}
+
+#rcorners3 {
+  border-radius: 50%;
+  background: #73AD21;
+  padding: 20px; 
+  width: 200px;
+  height: 150px;
+  text-align: center;
+} 
+
+/* border images */
+#borderimg { 
+  border: 10px solid transparent;
+  padding: 15px;
+  /* border-image: url(img/border.png) 30 round; */
+  /*stretch*/
+  /* border-image: url(img/border.png) 30 stretch; */
+  /* border-image: url(img/border.png) 50 round; */
+  /* border-image: url(img/border.png) 20% round; */
+  border-image: url(img/border.png) 30% round; 
+}
+
+/* multiple background */
+/* background yang paling kiri adalah background terdepan */
+#bekgrond {
+  background-image: url(img/sad.png), url(img/NP.png);
+  background-position: right bottom, left top;
+  background-repeat: no-repeat, repeat;
+  padding: 15px;
+}
+
+#begron {
+  background: url(img/smiling.png) left top no-repeat, url(img/sad.png) right bottom no-repeat, url(img/NP.png) left top repeat;
+  padding: 15px;
+  background-size: 50px, 130px, auto;
+}
+
+/* full background */
+/* html { 
+  background: url(img/NP.png) no-repeat center fixed; 
+  background-size: cover;
+} */
+
+/* background clip */
+#dortmund {
+  border: 10px dotted black;
+  padding: 35px;
+  background: yellow;
+}
+
+/* referensi background lainnya : https://www.w3schools.com/css/css3_backgrounds.asp */
+
+/* referensi color : https://www.w3schools.com/css/css3_colors.asp */
+
+/* box shadow */
+.boxsa { 
+  box-shadow: 0px 0px 15px mediumaquamarine;
+  border: 5px solid mediumseagreen;
+  padding: 15px;
+}
+
+.boxsa2 {
+  width: 300px;
+  height: 100px;
+  padding: 15px;
+  /* background-color: coral; */
+  /* box-shadow: 10px 10px; */
+  /* dengan warna spesifik */
+  /* box-shadow: 10px 10px lightblue;  */
+  /* dengan efek blur */
+  /* box-shadow: 10px 10px 5px lightblue; */
+  /* mengatur radius shadow */
+  /* box-shadow: 10px 10px 5px 12px lightblue; */
+  /* merubah bayangan luar menjadi bayangan dalam menggunakan inset*/
+  box-shadow: 10px 10px 5px lightblue inset;
+}
+
+/* multiple shadow */
+#mulsa {
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 5px blue, 10px 10px red, 15px 15px green;
+  margin: 20px;
+}
+
+#mulsa2 {
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 5px 8px blue, 10px 10px 8px red, 15px 15px 8px green;
+  margin: 20px;
+}
+
+/* gradient background */
+#grad {
+  height: 200px;
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: linear-gradient(mediumseagreen, tomato);
+}
+
+#grad2 {
+  height: 150px;
+  width: 200px;
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: radial-gradient(circle, red, yellow, green);
+}
+
+#grad3 {
+  height: 200px;
+  width: 200px;
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: conic-gradient(red, yellow, green);
+}
+
+#grad4 {
+  height: 200px;
+  width: 200px;
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: conic-gradient(red, yellow, green, blue, black);
+}
+
+#grad5 {
+  height: 200px;
+  width: 200px;
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: conic-gradient(red 0deg, red 90deg, yellow 90deg, yellow 180deg, green 180deg, green 270deg, blue 270deg);
+  border-radius: 50%;
+}
+
+#grad6 {
+  height: 200px;
+  width: 200px;
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: conic-gradient(from 90deg, red, yellow, green);
+  border-radius: 50%;
+}
+
+#grad7 {
+  height: 200px;
+  width: 200px;
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: repeating-conic-gradient(red 0deg 10deg, yellow 10deg 20deg, blue 20deg 30deg);
+  border-radius: 50%;
+}
+
+/* referensi gradient background : https://www.w3schools.com/css/css3_gradients.asp */
+
+/* card */
+.card {
+  width: 250px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
+
+.cardo {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  font-size: 40px;
+}
+
+.cardi {
+  padding: 10px;
+}
+
+.kartu {
+  width: 250px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
+
+.karti {
+  padding: 10px;
+}
+
+/* text overflow */
+/* ellipsis akan memangkas text di dalam border jika sekiranya text berlebihan */
+p.clip {
+  white-space: nowrap; 
+  width: 200px; 
+  border: 1px solid #000000;
+  overflow: hidden;
+  /* text-overflow: clip; */
+  text-overflow: ellipsis;
+}
+
+/* vertical text */
+p.verti {
+  writing-mode: vertical-rl; 
+}
+
+/* font face */
+/* memanggil font milik kita sendiri */
+@font-face {
+  font-family: myFirstFont;
+  src: url(Montserrat-Medium.ttf);
+}
+
+* {
+  font-family: myFirstFont;
+}
+
+/* 2D Transform */
+/* info : deg berarti degradasi */
+/* berikut metode-metode 2D transform */
+/* translate()
+rotate()
+scaleX()
+scaleY()
+scale()
+skewX()
+skewY()
+skew()
+matrix() */
+.duad {
+  width: 300px;
+  height: 100px;
+  background-color: mediumspringgreen;
+  border: 1px solid mediumseagreen;
+  transform: translate(50px,100px);
+  /* translate untuk memindahkan elemen dari posisinya saat ini
+  artinya pindahkan 50 piksel ke kanan, dan 100 piksel ke bawah dari posisinya saat ini  */
+  transform: rotate(20deg);
+  /* transform: rotate(-20deg); */
+  /* rotate() memutar elemen searah jarum jam atau berlawanan arah jarum jam sesuai dengan
+   derajat yang diberikan */
+   /* transform: scale(2, 3);
+   transform: scale(0.5,0.5); */
+   /* scale menambah atau mengurangi ukuran elemen (sesuai dengan parameter yang diberikan
+   untuk lebar dan tinggi)
+   artinya naikkan 2 kali dan tinggi 3 kali dari ukuran aslinya */
+   transform: scaleX(2);
+   transform: scaleX(0.5);
+   /* scaleX untuk menambah atau mengurangi lebar elemen (X : horizontal) */
+   transform: scaleY(0.5);
+   /* scaleY untuk vertical */
+   transform: skewX(20deg);
+   transform: skewY(20deg);
+   /* skew (X/Y) untuk memiringkan elemen sepanjang sumbu X/Y dengan sudut tertentu */
+   transform: skew(20deg, 10deg);
+   /* dengan skew seperti ini artinya sebelah kiri X dan kanan Y */
+   transform: matrix(1, -0.3, 0, 1, 0, 0);
+   /* matrix menggabungkan semua metode transformasi 2D menjadi satu
+   matrix mengambil enam parameter, yang berisi fungsi matematika, yang memungkinkan untuk memutar,
+   menskalakan, memindahkan , dan memiringkan elemen
+   urutan/Parameternya adalah sebagai berikut: 
+   matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY()) */
+  }
+   /* 3D Transform */
+   /* berikut metode-metode 3D transform */ 
+   /* rotateX()
+   rotateY()
+   rotateZ() */
+  
+.tigad {
+  width: 300px;
+  height: 100px;
+  background-color: mediumspringgreen;
+  border: 1px solid mediumseagreen;
+  transform: rotateX(150deg);
+  /* rotateX memutar elemen di sekitar sumbu X pada derajat tertentu */
+  transform: rotateY(150deg);
+  /* rotateY untuk sumbu Y (vertical) */
+  transform: rotateZ(90deg);
+  /* rotateZ untuk sumbu Z */
+
+}
+
+/* transition */
+/* berikut elemen-elemennya */
+/* transition
+transition-delay
+transition-duration
+transition-property
+transition-timing-function */
+/* Untuk membuat efek transisi, harus menentukan dua hal: efek pada properti CSS dan durasi efeknya
+Info: Jika durasi kosong, transisi tidak akan berpengaruh, karena nilai defaultnya adalah 0. */
+.transisi {
+  width: 100px;
+  height: 100px;
+  background: mediumorchid;
+  transition: width 2s;
+}
+.transisi:hover {
+  /* width dan height */
+  width: 300px;
+  height: 300px;
+  /* speed */
+  /* linear : efek transisi dengan kecepatan yang sama dari awal hingga akhir */
+  /* transition-timing-function: linear; */ 
+
+  /* ease : efek transisi dengan awal yang lambat, lalu cepat, lalu berakhir perlahan (ini default) */
+  /* transition-timing-function: ease; */
+
+  /* ease-in : efek transisi dengan awal yang lambat */
+  /* transition-timing-function: ease-in; */
+
+  /* ease-out : efek transisi dengan akhir yang lambat */
+  /* transition-timing-function: ease-out; */
+
+  /* ease-in-out : efek transisi dengan awal dan akhir yang lambat */
+  transition-timing-function: ease-in-out;
+
+  /* delay */
+  transition-delay: 1s;
+}
+
+  /* Transition + Transformation */
+  .trans {
+    width: 100px;
+    height: 100px;
+    background: mediumorchid;
+    transition: width 2s, height 2s, transform 2s;
+  }
+  .trans:hover {
+    width: 300px;
+    height: 300px;
+    transform: rotate(180deg);
+  }
+
+  /* Animasi */
+  /* properti-properti animasi : */
+  /* 
+  @keyframes : bagian yang penting dalam membuat animasi CSS
+  animation-name
+  animation-duration
+  animation-delay
+  animation-iteration-count
+  animation-direction
+  animation-timing-function
+  animation-fill-mode
+  animation */
+  .animasi {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: contoh;
+    animation-duration: 4s; /*default nya adalah 0 jika tidak diisi*/
+  }
+  @keyframes contoh {
+    /* menggunakan metode from dan to */
+    from {background-color: red;}
+    to {background-color: yellow;}
+  }
+
+  .animasi2 {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: conto;
+    animation-duration: 4s;
+  }
+  @keyframes conto {
+    /* menggunakan metode persen (0% start 100% finish) */
+    0%   {background-color: tomato;}
+    25%  {background-color: yellow;}
+    50%  {background-color: blue;}
+    100% {background-color: green;}
+  }
+
+  .animasi3 {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    animation-name: cont;
+    animation-duration: 4s;
+    animation-delay: 1s;
+    /* menggunakan animation-delay dengan angka negatif, animasi akan berjalan dari animasi ke 3. karena delaynya
+    adalah -2 */
+    /* animation-delay: -2s; */
+    /* mengatur waktu berapa kali animasi berjalan */
+    /* animation-iteration-count: 3; */
+    /* infinite untuk menjalankan animasi tanpa henti */
+    animation-iteration-count: infinite;
+    /* arah animasi, menentukan gerakan animasi. nilainya bisa normal, reverse, alternate, atau alternate-reverse */
+    animation-direction: reverse; /*kebalikan*/
+    animation-direction: alternate; /*putaran awal ke depan, putaran kedua ke belakang*/
+    animation-direction: alternate-reverse; /*putaran awal ke belakang, putaran kedua ke depan*/
+    /* speed, untuk mengatur speed : linear, ease, ease-in, ease-out, ease-in-out */
+    animation-timing-function: ease;
+    /* mode, mengatur kapan efek animasi berjalan : none, forwards, backwards, dan both  */
+    animation-fill-mode: forwards;
+    animation-fill-mode: backwards;
+    animation-delay: 1s;
+    animation-fill-mode: both;
+  }
+  @keyframes cont {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;}
+  }
+
+  .animasi4 {
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    background-color: red;
+    position: relative;
+    animation-name: example;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+  @keyframes example {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;}
+  }
+
+  /* style image */
+  /* rounded */
+  .bulet {
+    border-radius: 50px;
+  }
+
+  /* thumbnail */
+  .thumbnail {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 150px;
+  }
+  
+  .thumbnail:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+  }
+
+  .tgh {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  } 
+  
+  /* filter */
+  img {
+    width: 33%;
+    height: auto;
+    float: left; 
+    max-width: 235px;
+  }
+  
+  .blur {filter: blur(4px);}
+  .brightness {filter: brightness(250%);}
+  .contrast {filter: contrast(180%);}
+  .grayscale {filter: grayscale(100%);}
+  .huerotate {filter: hue-rotate(180deg);}
+  .invert {filter: invert(100%);}
+  .opacity {filter: opacity(50%);}
+  .saturate {filter: saturate(7);}
+  .sepia {filter: sepia(100%);}
+  .shadow {filter: drop-shadow(8px 8px 10px green);}
+
+  /* image hover overlay */
+  .containo {
+    position: relative;
+    width: 50%;
+  }
+  
+  .imago {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  .overlayo {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    background-color: #008CBA;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+  }
+
+  .containo:hover .overlayo {
+    bottom: 0;
+    height: 100%;
+  }
+  
+  .textoo {
+    white-space: nowrap; 
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
+
+  /* flip image */
+  .kebolak:hover {
+    transform: scaleX(-1);
+  } 
+
+  /* referensi style image : https://www.w3schools.com/css/css3_images.asp */
+
+  /* cermin gambar */
+  /* untuk mencerminkan gambar, menggunakan box-reflect nilainya : below, above, left , dan right */
+  .cermins {
+    /* -webkit-box-reflect: below; */
+    -webkit-box-reflect: right;
+  }
+  /* referensi cermin gambar : https://www.w3schools.com/css/css3_image_reflection.asp */
+
+  /* object-fit dan object-position */
+  /* object-fit : untuk memperbagus gambar jika ukuran gambar dimodif */
+  /* nilainya : fill, contain, cover, none, scale-down */
+  /* object-position : untuk menentukan posisi pada object-fit yang sudah dibuat sebelumnya */
+  .obf {
+    width: 200px;
+    height: 300px;
+    /* object-fit: cover; */
+    object-fit: contain;
+    /* object-position: 80% 100%; */
+    object-position: 15% 100%;
+  }
+
+    /* Tooltip */
+    .tooltip {
+      position: relative;
+      display: inline-block;
+      border-bottom: 1px dotted black;
+    }
+    
+    .tooltip .tooltiptext {
+      visibility: hidden;
+      width: 120px;
+      background-color: black;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 5px 0;
+    
+      /* Position the tooltip */
+      position: absolute;
+      z-index: 1;
+    }
+    
+    .tooltip:hover .tooltiptext {
+      visibility: visible;
+    }
+
+    /* Masking */
+    .mask1 {
+      background-color: #008CBA;
+      -webkit-mask-image: url(img/w3logo.png);
+      mask-image: url(img/w3logo.png);
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;    
+    }
+
+    /* button */
+    .button {
+      background-color: #4CAF50; /* Green */
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+    
+    /* background button */
+    .biru {background-color: #008CBA;} /* Blue */
+    .merah {background-color: #f44336;} /* Red */ 
+    .abu {background-color: #e7e7e7; color: black;} /* Gray */ 
+    .hitam {background-color: #555555;} /* Black */
+
+    /* ukuran button (menggunakan font-size) */
+    .sepuluh {font-size: 10px;}
+    .duabelas {font-size: 12px;}
+    .enambelas {font-size: 16px;}
+    .duapuluh {font-size: 20px;}
+    .duaempat {font-size: 24px;}
+
+    /* padding button*/
+    .pad1 {padding: 10px 24px;}
+    .pad2 {padding: 12px 28px;}
+    .pad3 {padding: 14px 40px;}
+    .pad4 {padding: 32px 16px;}
+    .pad5 {padding: 16px;}
+
+    /* rounded button */
+    .brad1 {border-radius: 2px;}
+    .brad2 {border-radius: 4px;}
+    .brad3 {border-radius: 8px;}
+    .brad4 {border-radius: 12px;}
+    .brad5 {border-radius: 50%;}
+
+    /* hoverable button */
+    .buttonz {
+      background-color: #4CAF50; /* Green */
+      border: none;
+      color: white;
+      padding: 16px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      transition-duration: 0.4s;
+      cursor: pointer;
+    }
+
+    .buttonz1 {
+      background-color: white; 
+      color: black; 
+      border: 2px solid #4CAF50;
+    }
+    
+    .buttonz1:hover {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    .buttonz3 {
+      background-color: white; 
+      color: black; 
+      border: 2px solid #f44336;
+    }
+    
+    .buttonz3:hover {
+      background-color: #f44336;
+      color: white;
+    }
+
+    .buttonz4 {
+      background-color: white;
+      color: black;
+      border: 2px solid #e7e7e7;
+    }
+    
+    .buttonz4:hover {background-color: #e7e7e7;}
+
+    /* shadow button */
+    .buttonz:hover {
+      box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    }
+
+    /* disable button */
+    .disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    /* width button */
+    .leb {width: 50%;}
+
+    /* button group */
+    .btn-group .button {
+      background-color: #4CAF50; /* Green */
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      cursor: pointer;
+      float: left;
+      /* nyalakan display block untuk membuat button vertikal */
+      /* display: block; */
+    }
+    
+    .btn-group .button:hover {
+      background-color: #3e8e41;
+    }
+
+    /* button dalam gambar */
+    .butgam {
+      position: relative;
+      width: 100%;
+      max-width: 400px;
+    }
+    
+    .butgam img {
+      width: 100%;
+      height: auto;
+    }
+    
+    .butgam .btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      background-color: #f1f1f1;
+      color: black;
+      font-size: 16px;
+      padding: 16px 30px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      text-align: center;
+    }
+    
+    .butgam .btn:hover {
+      background-color: black;
+      color: white;
+    }
+
+    /* Animasi button */
+    .butan {
+      display: inline-block;
+      border-radius: 4px;
+      background-color: #f4511e;
+      border: none;
+      color: #FFFFFF;
+      text-align: center;
+      font-size: 28px;
+      padding: 20px;
+      width: 200px;
+      transition: all 0.5s;
+      cursor: pointer;
+      margin: 5px;
+    }
+    
+    .butan span {
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      transition: 0.5s;
+    }
+    
+    .butan span:after {
+      content: '\00bb';
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      right: -20px;
+      transition: 0.5s;
+    }
+    
+    .butan:hover span {
+      padding-right: 25px;
+    }
+    
+    .butan:hover span:after {
+      opacity: 1;
+      right: 0;
+    }
+
+    /* --- */
+    .butan2 {
+      display: inline-block;
+      padding: 15px 25px;
+      font-size: 24px;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      outline: none;
+      color: #fff;
+      background-color: #4CAF50;
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 9px #999;
+    }
+    
+    .butan2:hover {background-color: #3e8e41}
+    
+    .butan2:active {
+      background-color: #3e8e41;
+      box-shadow: 0 5px #666;
+      transform: translateY(4px);
+    }
+
+    /* --- */
+    .butan3 {
+      background-color: #f4511e;
+      border: none;
+      color: white;
+      padding: 16px 32px;
+      text-align: center;
+      font-size: 16px;
+      margin: 4px 2px;
+      opacity: 0.6;
+      transition: 0.3s;
+      display: inline-block;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    
+    .butan3:hover {opacity: 1}
+
+    /* --- */
+
+    .butan4 {
+      position: relative;
+      background-color: #4CAF50;
+      border: none;
+      font-size: 28px;
+      color: #FFFFFF;
+      padding: 20px;
+      width: 200px;
+      text-align: center;
+      transition-duration: 0.4s;
+      text-decoration: none;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    
+    .butan4:after {
+      content: "";
+      background: #f1f1f1;
+      display: block;
+      position: absolute;
+      padding-top: 300%;
+      padding-left: 350%;
+      margin-left: -20px !important;
+      margin-top: -120%;
+      opacity: 0;
+      transition: all 0.8s
+    }
+    
+    .butan4:active:after {
+      padding: 0;
+      margin: 0;
+      opacity: 1;
+      transition: 0s
+    }
+
+    /* pagination */
+    .pagination {
+      display: inline-block;
+    }
+    
+    .pagination a {
+      color: black;
+      float: left;
+      padding: 8px 16px;
+      text-decoration: none;
+    }
+    
+    .pagination a.active {
+      background-color: #4CAF50;
+      color: white;
+    }
+    
+    .pagination a:hover:not(.active) {background-color: #ddd;}
+
+    /* --- */
+    .center {
+      text-align: center;
+    }
+    
+    .paginationt {
+      display: inline-block;
+    }
+    
+    .paginationt a {
+      color: black;
+      float: left;
+      padding: 8px 16px;
+      text-decoration: none;
+      transition: background-color .3s;
+      border: 1px solid #ddd;
+      margin: 0 4px;
+    }
+    
+    .paginationt a.active {
+      background-color: #4CAF50;
+      color: white;
+      border: 1px solid #4CAF50;
+    }
+    
+    .paginationt a:hover:not(.active) {background-color: #ddd;}
+
+    /* multiple columns */
+    .newspaper {
+      column-count: 3;
+    }
+
+    .newspaper2 {
+      column-count: 3;
+      column-gap: 40px;
+      column-rule-style: solid;
+      column-rule-width: 1px;
+      column-rule-color: lightblue;
+    }
+
+    .newspaper3 {
+      column-count: 3;
+      column-gap: 40px;
+      column-rule: 1px solid lightblue;
+    }
+
+    .newspaper4 {
+      column-width: 100px;
+    }
+
+    /* css variables */
+    /* Fungsi var() digunakan untuk memasukkan nilai CSS variable.
+    css variabel berfungsi untuk menyederhanakan pengkodean dengan cara mendeklarasikan nilai/value css ke 
+    dalam root. Yang mana nantinya css dapat dipanggil menggunakan var sesuai dengan nilai css di dalam root
+    tadi, karena pembahasannya cukup rinci, saya memisahnya ke dalam file css_var.html dan style_var.css */
+    /* sintaknya seperti berikut : 
+    var(--name, value) 
+    dengan membuat var() maka kita dapat membuat css global dengan nama yang kita inginkan, dan juga kita 
+    tinggal mengubah nilai pada css global apabila ingin mengganti nulai element CSS*/
+
+    /* box sizing */
+    /* dengan menggunakan box sizing kita dapat membuat border memiliki ukuran yang sama satu sama lain */
+    .kothak1 {
+      width: 300px;
+      height: 100px;
+      border: 1px solid blue;
+      box-sizing: border-box;
+    }
+    
+    .kothak2 {
+      width: 300px;
+      height: 100px;  
+      padding: 50px;
+      border: 1px solid red;
+      box-sizing: border-box;
+    }
+
+    /* menggunakan box sizing memungkinkan untuk membuat kotak form yang seragam
+    referensi box sizing : https://www.w3schools.com/css/css3_box-sizing.asp */
+
+    /* CSS Media Queries
+    dengan CSS Media Queries kita dapat mengatur tampilan sesuai media yang ditentukan. 
+    pembahasan ini diskip, referensi : https://www.w3schools.com/css/css3_mediaqueries_ex.asp */
+
+    /* flexbox */
+    /* flexbox memudahkan untuk mendesain struktur tata letak responsif yang fleksibel
+    tanpa menggunakan float atau positioning */
+    .flex-container {
+      display: flex;
+      background-color: DodgerBlue;
+    }
+    
+    .flex-container > div {
+      background-color: #f1f1f1;
+      margin: 10px;
+      padding: 20px;
+      font-size: 30px;
+    }
+
+    /* RWD (Responsive Web Design)
+    RWD membuat tampilan menjadi baik pada semua device, RWD menggunakan html dan css, bukan js
+    pada RWD penulisan meta di dalam head sangat penting seperti :
+    <meta name="viewport" content="width=device-width, initial-scale=1.0
+    pada RWD menggunakan @media only screen */
+    /* saya menulis CSS RWD di file css3.html */
+
+    /* Grid
+    Menggunakan grid dapat memudahkan kita untuk membuat halaman landing page, maaf saya tidak
+    membuat pembahasan khusus tentang ini namun saya tetap mencantumkan referensinya */
+
+    /* Media queries juga ga saya buat hanya referensinya saja ya bisa dilihat */
+
+    /* RWD Image juga saya buat referensinya, fungsinya untuk ngakalin tampilan gambar pada device
+    yang berbeda, kita bisa siapkan 2 gambar untuk desktop, tablet, dan mobile misalnya  */
+
+    /* RWD framework
+    RWD memiliki framework seperti bootsrap dan w3s contohnya, lihat di referensi */
+
+    /* RWD Template
+    Lumayan untuk kita pelajari dan modifikasi, lihat di referensi */
+
+    /* CSS Grid juga hanya saya cantumkan referensinya saja karena sudah dibahas sebelumnya */
+
+    /* Loader */
+    .loader {
+      border: 16px solid #f3f3f3;
+      border-radius: 50%;
+      border-top: 16px solid #3498db;
+      width: 120px;
+      height: 120px;
+      -webkit-animation: spin 2s linear infinite; /* Safari */
+      animation: spin 2s linear infinite;
+    }
+    
+    /* Safari */
+    @-webkit-keyframes spin {
+      0% { -webkit-transform: rotate(0deg); }
+      100% { -webkit-transform: rotate(360deg); }
+    }
+    
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }

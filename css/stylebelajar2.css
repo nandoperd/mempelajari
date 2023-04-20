@@ -1,0 +1,58 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.kepala {
+    color: saddlebrown;
+    border: 1px solid;
+    border-color: mediumseagreen;
+    background-color: mediumspringgreen ;
+    padding: 15px;
+    margin: 10px;
+}
+
+.tai {
+    color: brown;
+    background-color: bisque;
+}
+
+/* BELAJAR CSS BAGIAN 2 */
+.judul {
+    color: mediumseagreen;
+    border-bottom: 1px solid;
+}
+
+/* Masking */
+.mask1 {
+  -webkit-mask-image: url(img/w3logo.png);
+  mask-image: url(img/w3logo.png);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;    
+}
+
+  /* Tooltip */
+  .tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+  
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+  
+    /* referensi tooltip : https://www.w3schools.com/css/css_tooltip.asp */

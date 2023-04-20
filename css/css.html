@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar CSS</title>
+
+    <link rel="stylesheet" href="stylebelajar.css">
+
+    <!-- google font -->
+    <!-- penulisan mengambil 1 referensi font dari google font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+
+    <!-- penulisan mengambil banyak referensi font dari google font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong">
+
+    <!-- penulisan memakai google font effect -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide&effect=fire">
+
+    <!-- penulisan mengambil banyak efek font dari google font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide&effect=neon|outline|emboss|shadow-multiple">
+
+    <!--     font awesome -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    
+    <!--     font glyphicon bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    
+    <!--     font google -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    <!-- di bawah ini adalah css juga, tapi khusus yang id dan classs aja -->
+    <style>
+        /* contoh css id, cirinya adalah didahului pagar */
+        #biru{
+            background-color: aqua;
+            color: mediumblue;
+        }
+
+        /* contoh css class, cirinya adalah didahului titik */
+        .monyet{
+            background-color: brown;
+            color: yellow;
+        }
+
+        /* modal gambar */
+        #myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {transform: scale(0.1)} 
+  to {transform: scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+    </style>
+</head>
+<body>
+    <p class="judul">Properti CSS sama</p>
+    <h6>aku h6</h6>
+    <p>aku p</p>
+
+    <p class="judul">Id dan Class</p>
+    <h2 id="biru">Gue anak ID</h2> <!--mengambil css id pada style di atas-->
+    <h2 class="monyet">Gue anak class</h2> <!--mengambil css class pada style di atas-->
+
+    <p class="judul">Warna</p>
+    <label for="warna">Pilih warna disini :</label>
+    <input type="color">
+
+    <!-- contoh warna dengan RGB -->
+    <p style="background-color: rgb(100, 0, 30);">Saya di RGB in</p>
+
+    <!-- contoh warna dengan kode hex (bukan css) -->
+    <p style="color: #000000;">hitam</p> 
+
+    <!-- contoh warna dengan kode CSS -->
+    <p style="background-color:#32a852;">Hijau</p>
+
+    <h3>referensi untuk mencari warna : <a href="https://www.google.com/search?si=AEcPFx6YkBiWpHxo7opt88fitap9hOnJJgyHTWCBgtaj-52bsO0sqYf0IQtB3oLNCWbXNFxSA1Wf3VrwXMOFDue_lFiGXmc69g%3D%3D&hl=en-ID&kgs=6052807e5e27813e&shndl=21&source=sh/x/fbx/1&fbxst=CgkKByMzMmE4NTI#cobssid=s">Google color picker</a> 
+      <a href="https://www.w3schools.com/colors/colors_names.asp" target="_blank">referensi Warna CSS</a>
+    </h3>
+    <p class="judul">Border</p>
+    <!-- box memiliki 3 elemen : border, padding, dan margin -->
+    <!-- elemen border -->
+    <!-- border
+    border-style
+    border-ARAH (top/bottom/right/left)
+    border-radius
+    border-width
+    border-color -->
+    <h4>Ane adalah percoaban border</h4>
+
+    <h3>Jenis jenis Border CSS </h3>
+
+    <!-- border style -->
+    <p class="solid">Border solid = lurus</p>
+    <p class="dotted">Border dotted = titik titik</p>
+    <p class="dashed">Border dashed = garis terpisah</p>
+    <p class="double">Border double = ada dua border seperti kotak.</p>
+    <p class="groove">Border groove </p>
+    <p class="ridge">Border ridge</p>
+    <p class="inset">Border Inset.</p>
+    <p class="outset">Border Outset.</p>
+    <p class="none">Tanpa Border.</p>
+    <p class="hidden">Border tesembunyi.</p>
+    <p class="mix">Border campuran.</p>
+
+    <!-- border position (arah/posisi) -->
+    <!-- - border-top (posisi atas saja)
+    - border-right (posisi kanan saja)
+    - border-bottom (posisi bawah saja)
+    - border-left (posisi kiri saja)
+    - border (semua arah) -->
+    <!-- contoh : -->
+    <p style="border-top: 1px dashed rgb(68, 61, 61);">Aku adalah tag p dengan border atas </p>
+    <p class="top">saya top solid di css sebelah</p>
+
+    <!-- contoh lengkungan -->
+    <p class="lengkungan">Lengkungan nih kan (Border Radius)</p>
+
+    <!-- Ukuran border bisa dimanipulasi dengan properti border-width -->
+    <p style="border: 5px solid black;">Aku adalah tag p dengan border 5px </p>
+    <p style="border-width: 10px;">Aku adalah tag p dengan border 10px </p>
+
+    <!-- contoh memberikan 4 nilai properti berbeda dengan struktur (atas kanan bawah kiri) -->
+    <p style="border-color: blue red green yellow; border-width: 1px; border-style:solid;">
+        Aku adalah tag p dengan border penuh warna 
+    </p>
+
+    <!-- atau bisa juga dengan spesifik -->
+    <p style="border-bottom-color:green; border-width: 1px; border-style:solid;">
+        Aku adalah tag p 
+    </p>
+
+    <div style="border: 1px whitesmoke;">
+    <p>gambaran box yang berisi padding, margin, dan border :</p>
+      <img src="img/boxmodel-css.jpg" alt="gambaran box model css"> 
+    </div>
+
+    <br><br><br><br><br><br><br><br>
+
+    <!-- padding -->
+    <p class="puding">Aku dikasih padding dong</p>
+    <p class="empat">Aku padding dengan 4 arah</p>
+    <p class="semua">Aku padding dengan semuanya</p>
+
+    <!-- batas dari kodi.ng  -->
+
+    <!-- mulai referensi w3school -->
+    <p style="text-align: center; font-size: 18px; color: seagreen;"><small>#css w3schools</small></p>
+    
+    <p class="judul">Memanggil 2 CSS</p>
+    <!-- memanggil dua model css bersamaan -->
+    <p class="tengah gede">Saya kombinasi dari tengah dan gede</p>
+
+    <p class="judul">Background opacity</p>
+    <!-- background menggunakan opacity -->
+    <p class="opacity">aku memakai background dengan opacity</p>
+
+    <p class="judul">Border (lagi)</p>
+    <!-- contoh border-width -->
+    <p class="borderwidth">Contoh border-width</p>
+
+    <!-- contoh border color -->
+    <p class="solidgreen">Hijau Solid</p>
+    <p class="dottedblue">Biru Dotted</p>
+
+    <!-- contoh individual side border -->
+    <p class="individual">Individual Side Border</p>
+    <p class="individual2">Bisa juga seperti ini</p>
+
+    <!-- contoh border shorthand -->
+    <p class="kiri">Bagian 1</p>
+    <p class="kiri">Bagian 2</p>
+
+    <!-- height dan width -->
+    <div class="hw">Contoh height dan width</div>
+
+    <!-- contoh outline -->
+    <p class="dotted-o">A dotted outline</p>
+    <p class="dashed-o">A dashed outline</p>
+    <p class="solid-o">A solid outline</p>
+    <p class="double-o">A double outline</p>
+    <p class="groove-o">A groove outline. The effect depends on the outline-color value.</p>
+    <p class="ridge-o">A ridge outline. The effect depends on the outline-color value.</p>
+    <p class="inset-o">An inset outline. The effect depends on the outline-color value.</p>
+    <p class="outset-o">An outset outline. The effect depends on the outline-color value.</p>
+
+    <!-- outline width -->
+    <p class="outline-w">Outline width</p>
+
+    <p class="outline-s">Outline ringkas</p>
+
+    <!-- outline offset -->
+    <p class="offset">Outline offset</p>
+
+    <p class="judul">Text</p>
+    <!-- text -->
+    <div class="text">
+        <h1>TEXT</h1>
+        <p class="texto">Ini adalah contoh penulisan menggunakan CSS</p>
+        <a href="https://github.com/nandoperd" target="_blank" class="texti">nandoperd</a>
+    </div>
+
+    <!-- contoh text align last -->
+    <p class="text-a">contoh align-last. a i u ala desa desu a i u ala desa desu. a i u ala desa desu
+        a i u ala desa desua i u ala desa desu. a i u ala desa desua i u ala desa desua i u ala desa.
+    </p>
+    <p class="text-b">contoh pakai direction. a i u ala desa desu a i u ala desa desu. a i u ala desa 
+        desu a i u ala desa desua i u ala desa desu. a i u ala desa desua i u ala desa desua i u ala. 
+    </p>
+
+    <!-- contoh vertical-align dengan elemen gambar -->
+    <p>
+        sebuah <img class="va" src="img/NP.png" alt="np" style="width: 3%;"> gambar dari NP
+    </p>
+    <br>
+
+    <p class="text-d">contoh text decoration</p>
+    <p class="text-ds">contoh shorthand text decoration</p>
+    <p>link tanpa garis <a href="https://github.com/nandoperd" class="tanpagaris" target="_blank">nandoperd</a></p>
+
+    <p class="text-transform">Contoh Text Transform</p>
+
+    <p class="text-space">Contoh Text Spacing. Contoh Text Spacing Contoh Text Spacing Contoh Text Spacing 
+        Contoh Text Spacing Contoh Text Spacing. Contoh Text Spacing Contoh Text Spacing Contoh Text Spacing.
+        Contoh Text Spacing Contoh Text Spacing Contoh Text Spacing Contoh Text Spacing Contoh Text Spacing.
+    </p>
+
+    <!-- text shadow -->
+    <p class="text-shadow">text shadow</p>
+
+    <!-- font -->
+    <p class="serif">Ini tulisan memakai font serif</p>
+    <p class="s-serif">Ini tulisan memakai font sans-serif</p>
+    <p class="monospace">Ini tulisan memakai font monospace</p>
+    <p class="cursive">Ini tulisan memakai font cursive</p>
+    <p class="fantasy">Ini tulisan memakai font fantasy</p>
+
+    <!-- font variant -->
+    <p class="variant">Ini tulisan memakai font variant small</p>
+
+    <!-- font size responsive -->
+    <p style="font-size:5vw;">Font responsive menggunakan font size viewport</p>
+
+    <!-- google font, lihat di atas bagian head -->
+    <p style="font-family: Sofia, sans-serif";>Contoh font sofia punyanya google font</p>
+    <p style="font-family: Audiowide, sans-serif";>Contoh font Audiowide punyanya google font</p>
+    <p style="font-family: Trirong, serif";>Contoh font Trirong punyanya google font</p>
+    
+    <!-- google font ditambah style tambahan -->
+    <p style="font-family: Audiowide, sans-serif; font-size: 30px;
+    text-shadow: 3px 3px 3px #ababab;">Contoh font Audiowide dengan style tambahan</p>
+
+    <!-- google font efek, lihat Referensi di atas pada head -->
+    <p class="font-effect-fire">Contoh font Audiowide dengan tambahan efek</p>
+    <!-- class di atas tidak kita tuliskan di CSS melainkan dipanggil melalui link di atas (head) -->
+    <h1 class="font-effect-neon">Neon Effect</h1>
+    <h1 class="font-effect-outline">Outline Effect</h1>
+    <h1 class="font-effect-emboss">Emboss Effect</h1>
+    <h1 class="font-effect-shadow-multiple">Multiple Shadow Effect</h1>
+
+    <!-- referensi : contoh font yang selaras (menurut saya)
+    font-family: Poppins, sans-serif;
+    dan
+    font-family: 'Abril Fatface', serif;
+    atau lihar referensi lainnya : https://www.w3schools.com/css/css_font_pairings.asp -->
+
+    <p class="font-s">contoh shorthand font</p>
+    
+    <p class="judul">Icon</p>
+    <!-- icon -->
+    <!-- contoh icon menggunakan library fontawesome, dipanggil pada link di atas (head) -->
+    <p>fontawesome</p>
+    <i class="fas fa-cloud"></i>
+    <i class="fas fa-heart"></i>
+    <i class="fas fa-car"></i>
+    <i class="fas fa-file"></i>
+    <i class="fas fa-bars"></i>
+    
+    <!-- icon dengan mengatur ukuran dan warna -->
+    <i class="fas fa-cloud" style="font-size:24px;"></i>
+    <i class="fas fa-cloud" style="font-size:36px;"></i>
+    <i class="fas fa-cloud" style="font-size:48px;color:red;"></i>
+    <i class="fas fa-cloud" style="font-size:60px;color:lightblue;"></i>
+    
+    <!-- contoh icon menggunakan library glyphicon, dipanggil pada link di atas (head) -->
+    <p>glyphicon (bootstrap)</p>
+    <i class="glyphicon glyphicon-cloud"></i>
+    <i class="glyphicon glyphicon-remove"></i>
+    <i class="glyphicon glyphicon-user"></i>
+    <i class="glyphicon glyphicon-envelope"></i>
+    <i class="glyphicon glyphicon-thumbs-up"></i>
+    
+    <!-- contoh icon menggunakan library google icon, dipanggil pada link di atas (head) -->
+    <p>google icon</p>
+    <i class="material-icons">cloud</i>
+    <i class="material-icons">favorite</i>
+    <i class="material-icons">attachment</i>
+    <i class="material-icons">computer</i>
+    <i class="material-icons">traffic</i>
+    <br>
+
+    <p class="judul">Link</p>
+    <!-- link -->
+    <a class="link" href="https://github.com/nandoperd" target="_blank">contoh link</a>
+    <br>
+
+    <a class="button" href="https://github.com/nandoperd">nandoperd</a>
+
+    <a class="button2" href="https://github.com/nandoperd" target="_blank">nandoperd</a>
+
+    <br>
+
+    <p class="judul">Properti Kursor</p>
+    <p>Arahkan Kursor ke link di bawah!</p>
+    <span style="cursor:auto">auto</span> | 
+    <span style="cursor:crosshair">crosshair</span> | 
+    <span style="cursor:default">default</span> | 
+    <span style="cursor:e-resize">e-resize</span> | 
+    <span style="cursor:help">help</span> | 
+    <span style="cursor:move">move</span> | 
+    <span style="cursor:n-resize">n-resize</span> | 
+    <span style="cursor:ne-resize">ne-resize</span> | 
+    <span style="cursor:nw-resize">nw-resize</span> | 
+    <span style="cursor:pointer">pointer</span> | 
+    <span style="cursor:progress">progress</span> | 
+    <span style="cursor:s-resize">s-resize</span> | 
+    <span style="cursor:se-resize">se-resize</span> | 
+    <span style="cursor:sw-resize">sw-resize</span> | 
+    <span style="cursor:text">text</span> | 
+    <span style="cursor:w-resize">w-resize</span> | 
+    <span style="cursor:wait">wait</span> | 
+    <br>
+
+    <p class="judul">List</p>
+    <!-- list -->
+
+    <ul class="a">
+        <li>Kopi</li>
+        <li>Teh</li>
+        <li>Soda</li>
+    </ul>
+    <ul class="b">
+        <li>Kopi</li>
+        <li>Teh</li>
+        <li>Soda</li>
+    </ul>
+    <ul class="c">
+        <li>Kopi</li>
+        <li>Teh</li>
+        <li>Soda</li>
+    </ul>
+
+    <!-- posisi list     -->
+    <h4>list outside</h4>
+    <ul class="d">
+        <li>Coffee - A brewed drink prepared from roasted coffee beans, which are the seeds of berries from the Coffea plant
+            Coffee - A brewed drink prepared from roasted coffee beans, which are the seeds of berries from the Coffea plant
+            Coffee - A brewed drink prepared from roasted coffee beans, which are the seeds of berries from the Coffea plant
+        </li>
+        <li>Tea - An aromatic beverage commonly prepared by pouring hot or boiling water over cured leaves of the Camellia sinensis, an evergreen shrub (bush) native to Asia</li>
+    </ul>
+
+    <h4>list inside</h4>
+    <ul class="e">
+        <li>Coffee - A brewed drink prepared from roasted coffee beans, which are the seeds of berries from the Coffea plant
+            Coffee - A brewed drink prepared from roasted coffee beans, which are the seeds of berries from the Coffea plant
+            Coffee - A brewed drink prepared from roasted coffee beans, which are the seeds of berries from the Coffea plant
+        </li>
+        <li>Tea - An aromatic beverage commonly prepared by pouring hot or boiling water over cured leaves of the Camellia sinensis, an evergreen shrub (bush) native to Asia</li>
+    </ul>
+
+    <!-- beberapa tipe list lainnya coba lihat di : https://www.w3schools.com/css/tryit.asp?filename=trycss_list-style-type_all -->
+    <!-- contoh lain -->
+    <ul class="f">
+        <li>Kopi</li>
+        <li>Teh</li>
+        <li>Soda</li>
+    </ul>
+
+    <ul class="g">
+        <li>Kopi</li>
+        <li>Teh</li>
+        <li>Soda</li>
+    </ul>
+
+    <p class="judul">Tabel</p>
+    <!-- table -->
+    
+    <table id="tabel">
+        <tr>
+          <th>Company</th>
+          <th>Contact</th>
+          <th>Country</th>
+        </tr>
+        <tr>
+          <td>Alfreds Futterkiste</td>
+          <td>Maria Anders</td>
+          <td>Germany</td>
+        </tr>
+        <tr>
+          <td>Berglunds snabbköp</td>
+          <td>Christina Berglund</td>
+          <td>Sweden</td>
+        </tr>
+        <tr>
+          <td>Centro comercial Moctezuma</td>
+          <td>Francisco Chang</td>
+          <td>Mexico</td>
+        </tr>
+      </table>
+
+      <!-- tabel responsive -->
+      <div style="overflow-x: auto;">
+        <table class="r">
+          <tr>
+            <th>Nama Dia</th>
+            <th>Nama Bapak</th>
+            <th>Points</th>
+            <th>Points</th>
+            <th>Points</th>
+            <th>Points</th>
+            <th>Points</th>
+            <th>Points</th>
+            <th>Points</th>
+            <th>Points</th>
+            <th>Points</th>
+            <th>Points</th>
+          </tr>
+          <tr>
+            <td>Bejo</td>
+            <td>Tejo</td>
+            <td>94</td>
+            <td>94</td>
+            <td>94</td>
+            <td>94</td>
+            <td>94</td>
+            <td>94</td>
+            <td>94</td>
+            <td>94</td>
+            <td>94</td>
+            <td>94</td>
+          </tr>
+        </table>
+      </div>
+      <br>
+      
+      <p class="judul">Display</p>
+      <!-- display -->
+      <ul>
+        <li class="dis">HTML</li>
+        <li class="dis">CSS</li>
+        <li class="dis">PHP</li>
+      </ul>
+
+      <!-- overflow -->
+      <div class="ov">
+        <p>Bersama jimjum dan sunny, Bersama jimjum dan sunny, Bersama jimjum dan sunny, Bersama jimjum dan sunny
+            Bersama jimjum dan sunny Bersama jimjum dan sunny Bersama jimjum dan sunny Bersama jimjum dan sunny
+        </p>
+      </div>
+
+      <!-- float -->
+      <img src="img/NP.png" alt="np" class="f">
+
+      <!-- menggunakan clear dari float sebelumnya -->
+      <h2>tanpa clear</h2>
+        <div class="f1">div</div>
+        <div class="f2">div ini akan mengikuti aturan class sebelumnya yang menggunakan float left</div>
+        <br><br>
+
+        <h2>dengan clear</h2>
+        <div class="f3">div</div>
+        <div class="f4">div ini tidak mengikuti yang sebelumnya karena sudah ditambahkan clear</div>
+
+      <!-- menggunakan clearfix -->
+      <p>float tanpa clearfix</p>
+      <div class="flo">
+        <img class="f" src="img/NP.png">
+        Tanpa clearfix maka CSS tidak disetel ulang kemabali alias mengikuti perintah CSS sebelumnya
+      </div>
+      
+      <br>
+
+      <p>float dengan clearfix</p>
+      <div class="clearfix">
+        <img class="f" src="img/NP.png">
+        Ini adalah contoh yang sudah menggunakan clearfix
+      </div>
+
+      <p class="judul">Float</p>
+      <!-- contoh float -->
+      <!-- float menu -->
+      <div class="clearfix">
+        <div class="box" style="background-color:#bbb">
+        <p>MENU 1</p>
+        </div>
+        <div class="box" style="background-color:#ccc">
+        <p>MENU 2</p>
+        </div>
+        <div class="box" style="background-color:#ddd">
+        <p>MENU 3</p>
+        </div>
+      </div>
+
+      <!-- float gambar -->
+      <div class="clearfix">
+        <div class="img-container">
+        <img src="img/sad.png" alt="Italy" style="width:100%">
+        </div>
+        <div class="img-container">
+        <img src="img/NP.png" alt="Forest" style="width:100%">
+        </div>
+        <div class="img-container">
+        <img src="img/smiling.png" alt="Mountains" style="width:100%">
+        </div>
+      </div>
+
+      <!-- float nav -->
+      <ul class="fl">
+        <li class="fl"><a href="#home" class="active">Home</a></li>
+        <li class="fl"><a href="#news">News</a></li>
+        <li class="fl"><a href="#contact">Contact</a></li>
+        <li class="fl"><a href="#about">About</a></li>
+      </ul>
+
+      <!-- nav menggunakan display inline-block -->
+      <ul class="nav">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#clients">Our Clients</a></li>  
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+
+      <p class="judul">Kelas Semu (Pseudoclsass)</p>
+      <!-- pseudo class -->
+      <div class="pseudo">Arahkan Kursor kesini!
+        <p class="pseudo">BAKEKOK!</p>
+      </div>
+      
+      <!-- first-child -->
+      <div class="fc">
+        <p class="fc">first</p>
+        <p class="fc">second</p>
+        <p class="fc">ketiga</p>
+      </div>
+
+      <div class="fcc">
+        <p class="fcc">pertama <i>miring</i> kan. kedua <i>miring</i> kan</p>
+        <p class="fcc">ketiga <i>miring</i> kan. keempat <i>miring</i> kan</p>
+      </div>
+
+      <!-- pseudo elemen -->
+      <div class="ps">
+      <h1 class="ps">Jimjum dan Sunny</h1>
+      <p class="ps">bersama jimjum dan sunny bersama jimjum dan sunny bersama jimjum dan sunny 
+        bersama jimjum dan sunny bersama jimjum dan sunny bersama jimjum dan sunny bersama jimjum dan sunny
+        bersama jimjum dan sunny bersama jimjum dan sunny bersama jimjum dan sunny bersama jimjum dan sunny
+      </p>
+      </div>
+
+      <p class="judul">Opacity</p>
+      <div class="opa">
+        <img width="10%" src="img/NP.png" alt="">
+        <img width="50%" src="img/nandoperd.png" alt="">
+      </div>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+      <div class="bg">
+        <div class="opac">
+          <p>background transparan</p>
+        </div>
+      </div>
+
+      <p class="judul">Navbar</p>
+
+      <!-- navbar sticky -->
+      <div class="sticky">
+      <ul class="sticky">
+        <li class="sticky"><a href="#">MENU</a></li>
+        <li class="sticky"><a href="#">PROFIL</a></li>
+        <li class="sticky"><a href="#">PESAN</a></li>
+      </ul>
+            <!-- dropdown -->
+            <div class="dropdown">
+              <button class="dropbtn">Dropdown</button>
+              <div class="dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+              </div>
+            </div>
+      </div>
+
+      <!-- css image gallery -->
+      <div class="gallery">
+        <a target="_blank" href="img/nandoperd.png">
+          <img src="img/nandoperd.png" alt="Cinque Terre" width="600" height="400">
+        </a>
+        <div class="desc">Klik gambar untuk melihat gambar penuh</div>
+      </div>
+
+      <div class="clearfix"></div>
+
+      <!-- <a href="html.html" target="_blank">html</a>
+      <br><br><br><br> -->
+
+      <p class="judul">Form</p>
+
+      <!-- form -->
+      <div class="form">
+        <form action="/action_page.php">
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+      
+          <label for="country">Country</label>
+          <select id="country" name="country">
+            <option value="australia">Australia</option>
+            <option value="canada">Canada</option>
+            <option value="usa">USA</option>
+          </select>
+
+          <div class="form">
+            <label for="fname">Nama</label>
+            <input type="number" id="fname" name="firstname" placeholder="Nama Anda..">
+          </div>
+        
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+
+      <p class="judul">CSS Counter (Penomoran otomatis)</p>
+      <!-- css counter -->
+      <h6>html</h6>
+      <h6>css</h6>
+      <h6>javascript</h6>
+      <h6>PHP</h6>
+
+      <!-- counter sub nomor -->
+      <!-- <h4>UML</h4>
+      <h5>Usecase Diagram</h5>
+      <h5>Sequence Diagram</h5>
+      <h5>Class Diagram</h5>
+
+      <h4>Mobil</h4>
+      <h5>BMW</h5>
+      <h5>Toyota</h5>
+      <h5>Volvo</h5> -->
+
+      <p class="judul">!Important</p>
+      <!-- Important -->
+      <h3 class="imp">!Important</h3>
+
+      <p class="judul">Corner</p>
+      <!-- rounded corners -->
+      <p id="rcorners">Rounded corners!</p>
+
+      <p>Two values - border-radius: 15px 50px:</p>
+      <p id="rcorners1"></p>
+
+      <p id="rcorners2">Rounded corners!</p>
+
+      <p id="rcorners3">Rounded corners!</p>
+
+      <p class="judul">Border Image</p>
+      <!-- border image -->
+      <p id="borderimg">border-image: url(border.png) 30 round;</p>
+
+      <p class="judul">Multiple Background</p>
+      <!-- Multiple background -->
+      <div id="bekgrond">
+        <p>bersama jimjum dan sunny</p>
+      </div>
+
+      <div id="begron">
+        <p>bersama jimjum dan sunny</p>
+      </div>
+
+      <!-- background clip -->
+      <div id="dortmund">
+        <h2>Background clip</h2>
+        <p>bersama jimjum dan sunny bersama jimjum dan sunny bersama jimjum dan sunny bersama jimjum dan sunny</p>
+      </div>
+      <br>
+
+      <p class="judul">Box Shadow</p>
+      <!-- Box shadow -->
+      <div class="boxsa">
+        <p>Box shadow</p>
+      </div>
+
+      <div class="boxsa2">BOX SHADOW  </div>
+      <br>
+
+      <p class="judul">Multiple Shadow</p>
+      <div id="mulsa">Multiple Shadow</div>
+      <br>
+
+      <div id="mulsa2">Multiple Shadow</div>
+      <br>
+
+      <p class="judul">Gradient Background</p>
+      <!-- beberapa contoh gradient background -->
+      <div id="grad"></div>
+      <!-- <div id="grad2"></div>
+      <div id="grad3"></div>
+      <div id="grad4"></div>
+      <div id="grad5"></div>
+      <div id="grad6"></div> -->
+      <div id="grad7"></div>
+
+      <p class="judul">Card</p>
+      <!-- card -->
+      <div style="float: left;" class="card">
+        <div class="cardo">
+          <h1>1</h1>
+        </div>
+      
+        <div class="cardi">
+          <p>24 Februari 2023</p>
+        </div>
+      </div>
+
+      <div style="float: right;" class="kartu">
+        <img src="img/NP.png" alt="np" style="width:100%">
+        <div class="karti">
+          <p>Logo NP</p>
+        </div>
+      </div>
+
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+      <p class="judul">Text Overflow</p>
+      <!-- text overflow -->
+      <h2>text-overflow: clip:</h2>
+      <p class="clip">Tulisan di dalam kotak ini sepertinya kebanyakan</p>
+
+      <p class="verti">TULISAN VERTICAL</p>
+
+      <p class="judul">Font Face</p>
+      <!-- font face -->
+      <h1>@font-face</h1>
+
+      <div>
+      With CSS, websites can use fonts other than the pre-selected "web-safe" fonts.
+      </div>
+
+      <br><br>
+
+      <p class="judul">Transform 2D</p>
+      <!-- 2D Transform -->
+      <div class="duad">
+        Transform 2D
+      </div>
+
+      <br><br><br><br><br><br><br>
+
+      <p class="judul">Transform 3D</p>
+      <br><br><br><br><br>
+      <!-- 3D Transform -->
+      <div class="tigad">
+        Transform 3D
+      </div>
+
+      <!-- Transisi -->
+      <div class="transisi">
+        Transisi
+      </div>
+
+      <!-- Transition + Transformation -->
+      <div class="trans">
+        Transition + Transformation
+      </div>
+      
+      <!-- Animasi -->
+      <div class="animasi">Animasi Form to</div>
+
+      <div class="animasi2">Animasi Persen</div>
+
+      <div class="animasi3">KOTAK</div>
+
+      <div class="animasi4">Shorthand Animasi</div>
+
+      <br><br><br><br><br><br><br><br><br><br><br><br>
+
+      <p class="judul">Style Gambar</p>
+      <!-- style image -->
+      <div>
+      <img src="img/NP.png" alt="" class="bulet">
+
+      <img src="img/NP.png" alt="" class="thumbnail">
+
+      <img src="img/NP.png" alt="" class="tgh">
+      </div>
+
+      <p class="judul">Filter Gambar</p>
+      <div>
+      <!-- Filter -->
+      <!-- <img src="img/NP.png" alt="Pineapple" width="300" height="300">
+      <img class="blur" src="img/NP.png" alt="Pineapple" width="300" height="300">
+      <img class="brightness" src="img/NP.png" alt="Pineapple" width="300" height="300">
+      <img class="contrast" src="img/NP.png" alt="Pineapple" width="300" height="300">
+      <img class="grayscale" src="img/NP.png" alt="Pineapple" width="300" height="300">
+      <img class="huerotate" src="img/NP.png" alt="Pineapple" width="300" height="300"> -->
+      <img class="invert" src="img/NP.png" alt="Pineapple" width="300" height="300">
+      <!-- <img class="opacity" src="img/NP.png" alt="Pineapple" width="300" height="300">
+      <img class="saturate" src="img/NP.png" alt="Pineapple" width="300" height="300">
+      <img class="sepia" src="img/NP.png" alt="Pineapple" width="300" height="300">
+      <img class="shadow" src="img/NP.png" alt="Pineapple" width="300" height="300"> -->
+      </div>
+      
+      <!-- image hover overlay -->
+      <!-- agak kurang rapih karena kebanyakan code -_- -->
+      <!-- <div class="containo">
+        <img src="img/NP.png" alt="NP" class="imago">
+        <div class="overlayo">
+          <div class="textoo">Hello World</div>
+        </div>
+      </div> -->
+
+      <p class="judul">Gambar Flip</p>
+      <!-- flip image -->
+      <img src="img/NP.png" alt="np" class="kebolak">
+
+      <p class="judul">Modal Gambar</p>
+      <!-- Gambar bermodal -->
+      <img id="myImg" src="img/NP.png" alt="NP" width="300" height="200">
+
+      <!-- Modal Gambar -->
+      <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+      </div>
+
+      <p class="judul">Gambar Cermin</p>
+      <!-- Cermin Gambar -->
+      <img src="img/sad.png" alt="np" class="cermins">
+
+      <p class="judul">Objek Fit</p>
+
+      <!-- object-fit -->
+      <!-- <div>
+      <img class="obf" src="img/NP.png" alt="Paris" width="400" height="300">
+      </div> -->
+
+      <!-- 2 gambar menggunakan object-fit -->
+      <div style="width:100%;height:400px;">
+        <img src="img/NP.png" alt="Norway" style="float:left;width:50%;height:100%;object-fit:cover;">
+        <img src="img/nandoperd.png" alt="Paris" style="float:left;width:50%;height:100%;object-fit:cover;">
+      </div>
+
+      <p class="judul">Tooltip</p>
+      <!-- Tooltip -->
+      <h2>Basic Tooltip</h2>
+  
+      <p>Move the mouse over the text below:</p>
+      
+      <div class="tooltip">Hover over me
+        <span class="tooltiptext">Tooltip text</span>
+      </div>
+
+      <!-- Masking -->
+      <p class="judul">Masking</p>
+
+      <p>Masking disini sepertinya tertutup, Silahkan klik <a href="css2.html#masking" target="_blank">Masking</a></p>
+      <a href="https://www.w3schools.com/css/css3_masking.asp">referensi masking</a>
+      <!-- <div class="mask1">
+        <img src="img/kertas.jpg" alt="NP" width="600" height="400">
+      </div> -->
+
+      <p class="judul">Button</p>
+      <p>Background button menggunakan class warna, ukuran, dan padding :</p>
+
+      <button class="button sepuluh pad1">Hijau</button>
+      <button class="button biru duabelas pad2">Biru</button>
+      <button class="button merah enambelas pad3">Merah</button>
+      <button class="button abu duapuluh pad4">Abu-abu</button>
+      <button class="button hitam duaempat pad5">Hitam</button>
+
+      <br>
+      
+      <!-- rounded button -->
+      <p>Rounded Button</p>
+      <button class="button brad1">Hijau</button>
+      <button class="button brad2">Biru</button>
+      <button class="button brad3">Merah</button>
+      <button class="button brad4">Abu-abu</button>
+      <button class="button brad5">Hitam</button>
+
+      <!-- hoverable button -->
+      <p>Hoverable button</p>
+      <button class="button buttonz1">Hijau</button>
+      <button class="button buttonz3">Merah</button>
+      <button class="button buttonz4">Abu</button>
+      <button class="button buttonz">Shadow</button>
+      
+      <!-- disable button -->
+      <button class="buttonz disabled">Disabled Button</button>
+      
+      <button class="buttonz leb">Button Lebar 50%</button>
+
+      <p>Button group</p>
+      <!-- button group -->
+      <div class="btn-group">
+        <button class="button">Button</button>
+        <button class="button">Button</button>
+        <button class="button">Button</button>
+        <button class="button">Button</button>
+      </div>
+
+      <p>Button dalam gambar</p>
+      <br><br>
+      <div class="butgam">
+        <img src="img/nandoperd.png" alt="np" style="width:100%">
+        <button class="btn">Button</button>
+      </div>
+
+      <br><br><br><br><br><br>
+
+      <p>Animasi button</p>
+      <button class="butan" style="vertical-align:middle"><span>Klik </span></button>
+      <button class="butan2">Klik</button>
+      <button class="butan3">Klik</button>
+      <button class="butan4">Klik</button>
+
+      <p class="judul">Pagination</p>
+      <div class="pagination">
+        <a href="#">&laquo;</a>
+        <a href="#">1</a>
+        <a class="active" href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">6</a>
+        <a href="#">&raquo;</a>
+      </div>
+
+      <br>
+
+      <div class="center">
+        <div class="paginationt">
+        <a href="#">&laquo;</a>
+        <a href="#">1</a>
+        <a href="#" class="active">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">6</a>
+        <a href="#">&raquo;</a>
+        </div>
+      </div>
+
+      <a href="https://www.w3schools.com/css/css3_pagination.asp#" target="_blank">referensi pagination</a>
+      <br>
+
+      <p class="judul">Multiple Columns</p>
+      <div class="newspaper">
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
+      </div>
+      <br>
+
+      <p style="border: 1px solid mediumaquamarine; width: fit-content; padding: 2px;">Atur warna pembatas Multiple Columns</p>
+      <div class="newspaper2">
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
+      </div>
+      <br>
+
+      <p style="border: 1px solid mediumaquamarine; width: fit-content; padding: 2px;">Shorthand Multiple Columns</p>
+      <div class="newspaper3">
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
+      </div>
+      <br>
+
+      <p style="border: 1px solid mediumaquamarine; width: fit-content; padding: 2px;">Ukuran Spesisfik Multiple Columns</p>
+      <div class="newspaper4">
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
+      </div>
+      <br>
+
+      <p class="judul">CSS Variables</p>
+      <a href="css_var.html" class="butan2" target="_blank">Link</a>
+      <br><br>
+        
+      <p class="judul">Box Sizing</p>
+      <div class="kothak1">Kotak 1</div>
+      <div class="kothak2">Kotak 2</div>
+      <br>
+
+      <p class="judul">Flexbox</p>
+      <div class="flex-container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>  
+      </div>
+      <a href="https://www.w3schools.com/css/css3_flexbox.asp">Referensi Flexbox</a>
+      <br>
+
+      <p class="judul">Responsive Web Design</p>
+      <a href="css3.html" class="butan2" target="_blank">RWD</a>
+      <br><br>
+
+      <p class="judul">Grid</p>
+      <a href="https://www.w3schools.com/css/css_rwd_grid.asp" target="_blank">Referensi Grid</a>
+
+      <p class="judul">Media Queries</p>
+      <a href="https://www.w3schools.com/css/css_rwd_mediaqueries.asp" target="_blank">Media Queries</a>
+
+      <p class="judul">RWD Images</p>
+      <a href="https://www.w3schools.com/css/css_rwd_images.asp" target="_blank">RWD Images</a>
+
+      <p class="judul">RWD Referensi Framework</p>
+      <a href="https://www.w3schools.com/css/css_rwd_frameworks.asp" target="_blank">RWD Framework</a>
+
+      <p class="judul">RWD Referensi Template</p>
+      <a href="https://www.w3schools.com/css/css_rwd_templates.asp" target="_blank">RWD Template</a>
+
+      <p class="judul">CSS Grid</p>
+      <a href="https://www.w3schools.com/css/css_grid.asp" target="_blank">Grid</a>
+
+      <p class="judul">Loader</p>
+      <div class="loader"></div>
+      
+      <!-- Script javascript -->
+      <script>
+        // Get the modal
+        var modal = document.getElementById('myModal');
+        
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var img = document.getElementById('myImg');
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+        img.onclick = function(){
+          modal.style.display = "block";
+          modalImg.src = this.src;
+          captionText.innerHTML = this.alt;
+        }
+        
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+        
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() { 
+          modal.style.display = "none";
+        }
+        </script>
+</body>
+</html>

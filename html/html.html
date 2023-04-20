@@ -1,0 +1,1025 @@
+<!doctype html> <!-- Deklarasi HTML 5--> <!-- ini comment, tidak dieksekusi-->
+
+<html lang="en"> <!-- pembuka html, di Viscod dengan klik '!' lalu enter maka akan muncul struktur html, adapun
+                    lang = "en" menyatakan bahasa halaman Web yang dimaksudkan untuk membantu mesin pencari dan browser-->
+    <head> <!-- pembuka heading, biasanya berisi : title, icon, alamat referensi style (css, bootstrap, template, dll) -->
+        <meta charset="UTF-8"> <!-- instruksi kepada web browser untuk menerjemahkan karakter-karakter di dalam halaman HTML
+                                 sebagai UTF-8 (Unicode Transformation Format-8) yang mendukung hampir seluruh karakter yang
+                                 ada di dunia-->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- mekanisme web browser mengirimkan halaman ke browser kita,
+                                                             bisa diisi berupa content-type, default-style dan refresh-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- membuat tampilan website menjadi responsive-->
+        <meta name="description" content="Free Web tutorials">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content="nandoperd">
+
+        <link rel="icon" type="image/x-icon" href="img/NP.png">
+        <title>Belajar HTML</title> <!-- Judul website-->
+
+        <style type="text/css">
+            h5 {
+                background-color:mediumSeaGreen;
+            }
+            h6 {
+                background-image : url(img/nandoperd.png);
+                background-repeat : no-repeat;
+                background-size : cover;
+            }
+            table, th, td {
+                /* border:1px solid black; */
+
+                /* kalo mau pakai collapse, 1 garis aja */
+                border-collapse: collapse; 
+
+                /* pakai warna bg */
+                /* background-color: #96D4D4; */
+
+                /* border radius */
+                /* border-radius: 10px; */
+                
+                /* border style ada banyak pilihan */
+                /* border-style: inset; */
+
+                /* warna background border (garisnya) */
+                /* border-color: #96D4D4; */
+            }
+            tr {
+                /* garis di bawah tabel */
+                border-bottom: 1px solid #ddd;
+                
+            }
+
+            /* garis di bawah tabel */
+            tr:hover {background-color: #D6EEEE;}
+
+            aside {
+            width: 30%;
+            padding-left: 15px;
+            margin-left: 15px;
+            float: right;
+            font-style: italic;
+            background-color: lightgray;
+            }
+            #div1, #div2 {
+            float: left;
+            width: 100px;
+            height: 35px;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid black;
+            }
+        </style>
+
+        <!-- Load external CSS styles, link css yang berelasi dengan code kita ada di link di bawah ini -->
+        <link rel="stylesheet" href="styles.css">
+
+        <!-- script javascript -->
+        <script>
+            function allowDrop(ev) {
+              ev.preventDefault();
+            }
+            
+            function drag(ev) {
+              ev.dataTransfer.setData("text", ev.target.id);
+            }
+            
+            function drop(ev) {
+              ev.preventDefault();
+              var data = ev.dataTransfer.getData("text");
+              ev.target.appendChild(document.getElementById(data));
+            }
+
+            //hitung klik dengan localStorage
+            function clickCounter() {
+            if (typeof(Storage) !== "undefined") {
+                if (localStorage.clickcount) {
+                localStorage.clickcount = Number(localStorage.clickcount)+1;
+                } else {
+                localStorage.clickcount = 1;
+                }
+                document.getElementById("hitung").innerHTML = "Kamu Klik Sebanyak " + localStorage.clickcount + " kan!?";
+            } else {
+                document.getElementById("hitung").innerHTML = "Sorry, your browser does not support web storage...";
+            }
+            }
+
+            //hitung klik dengan session
+            function clickCounter() {
+            if (typeof(Storage) !== "undefined") {
+                if (sessionStorage.clickcount) {
+                sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
+                } else {
+                sessionStorage.clickcount = 1;
+                }
+                document.getElementById("result2").innerHTML = "Kamu Klik Sebanyak " + sessionStorage.clickcount + " Kan!?";
+            } else {
+                document.getElementById("result2").innerHTML = "Sorry, your browser does not support web storage...";
+            }
+            }
+            </script>
+
+    </head> <!-- penutup head-->
+
+    <body> <!-- Deklarasi body (isi) dari code HTML yang akan kita buat-->
+
+        <h1><!-- bisa disebut judul/sub-judul, ada h1 s/d h6-->
+
+            <!-- Menampilkan gambar, bisa berupa jpg, png, juga gif-->
+            <img src="https://images6.fanpop.com/image/photos/37800000/-Hello-penguins-of-madagascar-37800672-500-500.gif" 
+            style="width:50px;height:55px;">
+        </h1>
+
+        <h2>Hello World!</h2>
+
+        <h3>Saya mencoba membuat referensi HTML (5) disini, Silahkan diikuti..</h3>
+
+        <!-- Penamaan..
+        Mengenal Elemen, Atribut, dan 
+        contoh : <h1 title="nandoperd">nandoperd</h1>
+        contoh di atas adalah sebuah elemen html
+        h1 adalah tag
+        title adalah atribut -->
+
+        <br>
+        <table>
+            Daftar isi :
+            <a href="#id">id</a>
+        </table>
+
+        <p id="paragraf"><b> BAB : Paragraf </b></p> <!--id adalah nilai yang dimiliki pada elemen, nantinya dapat dipanggil dengan perintah #id-->
+
+        <p>paragraf biasa</p>
+
+        <p>paragraf dengan jeda ke bawah <br> menggunakan br (break)</p>
+
+        <pre>
+            dengan pre (pre-formatted text),
+            kita bisa pindah paragraf tanpa perintah br
+            hasilnya seperti ini
+        </pre>
+
+        <p><b> BAB : Link </b></p>
+
+        <p>link : <a href="https://github.com/nandoperd">nandoperd</a>  -- 
+
+        link tab baru : <a href="https://github.com/nandoperd" target="_blank">nandoperd</a> --
+
+        link dengan gambar : 
+        <a href="https://github.com/nandoperd" target="_blank" >
+        <img src="https://cdn-icons-png.flaticon.com/512/235/235403.png?w=740&t=st=1672972939~exp=1672973539~hmac=b1116d94fd04f3ce222beecdce799e094801018f023ea69ccaec537096d9d454" width="20" height="25">
+        </a>  
+
+        link kirim email : <a href="mailto:bedebah@gmail.com" target="_blank" >email</a> --
+
+        <!-- link dengan tombol : <button onclick="#">nandoperd</button> -- pada bagian tombol ini kita harus memiliki kode javascript -->
+
+        link bookmark : <a href="#paragraf">paragraf</a> <!-- link bookmark mengarahkan ke id yang kita tuju, ini sangat berguna jika website kita panjang -->
+        </p>  
+
+        <p><b> BAB : Style </b></p> <!-- style pada dasarnya lebih enak dipakai dengan menggunakan css, tapi gapapa kita coba di html-->
+
+        <p style="color:red;">tulisan berwarna</p>
+
+        <p style="background-color:green;">tulisan berbackrgound</p>
+
+        <p style="font-family:verdana;">tulisan berfont</p>
+
+        <p style="font-size:verdana;">tulisan bersize</p>
+
+        <p style="text-align:center;">tulisan berposisi</p>
+
+        <p><b> BAB : Format </b></p>
+
+        <b>tebal</b> <!-- bisa juga pakai <strong> --> --
+        <i>miring</i> <!-- bisa juga pakai <em> --> --
+        <small>kecil</small> -- <mark>mark/stabilo</mark> -- <del>coret</del> -- 
+        <ins>garis bawah</ins> -- (pangkat) =8<sub>2</sub> / 7<sup>3</sup>--
+        <bdo dir="rtl">kebalik</bdo> -- <abbr title="Indonesia">IND</abbr> -- <q>kutipan</q> --
+        <blockquote> Quotes Of The Day </blockquote>
+
+        <p style="border: 2px solid DodgerBlue"><b> BAB : Warna </b></p>
+        
+        <p style="background-color:tomato">tomato</p>
+        <p style="background-color:rgb(50,100,150);">rgb(100,100,100)</p>
+        <p style="background-color:rgba(199, 226, 133, 1);">rgba(199, 226, 133, 1)</p>
+        <p style="background-color:#00653f;">HEX #00653f</p>
+        <p style="background-color:hsl(0, 100%, 75%);">hsl(0, 100%, 75%)</p>
+        <p style="background-color:hsla(9, 100%, 64%, 0.4);">hsla(9, 100%, 64%, 0.4)</p>
+
+        <p><b> BAB : CSS </b></p>
+        <!-- CSS (Cascading Style Sheets) bisa dipanggil dengan menggunakan 3 cara :
+        1. menggunakan style dengan ditulis di dalam elemen
+        2. menggunakan style di dalam head HTML
+        3. menggunakan link ke external css -->
+        <p style="color:green">contoh CSS di dalam elemen</p>
+        <h5>contoh CSS di dalam head HTML</h5>
+        <p>warna background aliceblue ini adalah contoh css eksternal (link) yang berada di file css </p>
+        <h4>contoh css eksternal</h4>
+        <a href="https://github.com/nandoperd" target="_blank">Link dengan css</a>
+
+        <p><b>BAB : Gambar </b></p>
+        <!-- Penyedia Online untuk membuat image map area : https://www.image-map.net/ -->
+        <img src="img/nandoperd.png" usemap="#image-map">
+
+        <map name="image-map" style="display: block; margin-left: auto; margin-right: auto;">
+            <area target="_blank" alt="Coding" title="Coding" href="coding.html" coords="292,58,290,152,314,155,317,133,342,125,357,125,372,136,381,155,410,153,408,58" shape="poly">
+            <area target="_blank" alt="Kopi" title="Kopi" href="kopi.html" coords="520,187,585,201,611,185,583,177,604,151,591,147,574,142,555,102,552,141,532,146,535,173,540,178" shape="poly">
+            <area target="_blank" alt="Fotografi" title="Fotografi" href="fotografi.html" coords="98,180,178,179,193,157,188,112,113,98,94,113" shape="poly">
+            <area target="_blank" alt="Me" title="Me" href="https://github.com/nandoperd" coords="67,288,196,273" shape="rect">
+        </map>
+
+        <!-- dengan menggunakan picture memungkinkan untuk mengatur gambar sesuai dengan ukuran yang digunakan/yang support oleh user -->
+        <!-- dikomen aja dulu ya 
+        <picture>
+            <source media="(min-width: 465px)" srcset="img/download.png">
+            <img src="img/nandoperd.png">
+        </picture> -->
+        
+        <p><b>BAB : Background</b></p>
+        <h1 style="background-image:url(img/nandoperd.png)">Sub Judul Ber-background</h1>
+         <!-- jika ukuran gambar lebih kecil maka gambar akan melakukan secara otomatis seperti ini, maka untuk menghentikannya dapat dengan 
+    `    menggunakan style/css background-repeat: no-repeat;-->
+         <h1 style="background-image:url(img/download.png)">Sub Judul Ber-background</h1>
+         <h6>Background <br> Ini adalah sub judul berbackrgound yang sudah dibuat style nya di dalam head</h6>
+
+        <p><b>BAB : Tabel</b></p> <!-- css tabel sudah ditulis di bagian head -->
+
+        <table style="width:100%"> <!-- pembuka tabel, untuk css tabel saya kumpulkan beberapa di dalam head tinggal dihidupkan -->
+        <colgroup> <!-- membuat grup kolom -->
+            <col span="2" style="background-color:red">
+            <col style="background-color:yellow">
+        </colgroup>
+        <caption>caption</caption>
+        <tr> <!-- tabel row -->
+            <th>Nama</th> <!-- tabel header, tabel kepala/judul tabel-->
+            <th>Club</th>
+            <th>Negara</th>
+        </tr>
+        <tr>
+            <td>Filippo Inzaghi</td> <!-- tabel data -->
+            <td>AC Milan</td>
+            <td>Italia</td>
+        </tr>
+        <tr>
+            <td>Cristiano Sugiono</td>
+            <td>Al-Nashr FC</td>
+            <td>Jepang</td>
+        </tr>
+        </table>
+
+        <p><b>BAB : List</b></p>
+
+            <!-- ul bisa ditambahkan style seperti <ul style="list-style-type: square;"> dll -->
+            <ul>
+                <li>list 1</li>
+                <li>list 2</li>
+            </ul>
+
+            <!-- untuk ol bisa ditambagkan tipe nya seperti <ol type="i"> bisa jadi A,a,I,dll -->
+                <!-- bisa juga ditambahkan start mulai angka darimana seperti <ol start="50"> -->
+            <ol> 
+                <li>list angka</li>
+                <li>list angka</li>
+            </ol>
+
+            <dl>
+                <dt>Kopi</dt>
+                <dd>- deskripsi kopi item</dd>
+                <dt>Susu</dt>
+                <dd>- deskripsi susu ..</dd>
+              </dl>
+
+              <!-- referensi bikin nav pakai li -->
+              <!-- https://www.w3schools.com/html/tryit.asp?filename=tryhtml_lists_menu -->
+
+        <p><b>BAB : Video</b></p>
+        <!-- <video width="320" height="240" controls> kayanya bisa pakai tag video ini kalo pake video sendiri-->
+        <!-- video youtube memiliki atribut autoplay dan muted, penulisannya : mute=1 / autoplay=1 (lihat contoh di bawah)     -->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/M7FIvfx5J10?autoplay=1&mute=1" title="Volvo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <!-- </video> -->
+
+        <p><b>BAB : Class</b></p>
+        <!-- berikut adalah contoh div yang memiliki class yang berelasi dengan style1.css -->
+        <div class="babi">
+            Babi
+        </div>
+
+        <div class="ngepet">
+            Ngepet
+        </div>
+
+        <!-- class dapat digabungkan seperti di bawah ini  -->
+        <div class="babi ngepet">
+            Babi Ngepet
+        </div>
+
+        <!-- contoh class dengan javascript yang berelasi ke script di bawah -->
+        <button onclick="myFunction()">Sembunyikan</button>
+
+        <h2 class="city">Kuda</h2>
+        <p>Kuda berlumping-lumping.</p>
+
+        <h2 class="city">Babi</h2>
+        <p>Babi mengepet-ngepet.</p>
+
+        <h2 class="city">Putri</h2>
+        <p>Putri berduyung-duyung.</p>
+
+        <p><b>BAB : id  </b></p>
+        <!-- perbedaan class dengan id ialah css class ditulis dengan diawali . sedangkan id diawali # -->
+        <h2 id="monyet">Monyet</h2>
+
+        <!-- id dapat digunakan sebagai link lompatan -->
+        <p id="id">BAB ID</p> <!-- cek pada halaman daftar isi di atas dan klik id-->
+
+        <!-- id sebagai lompatan ke halaman yang berbeda -->
+        <a href="murni.html">coba cek halaman ini terus klik yang bagian id</a>
+
+        <!-- id dengan javascript -->
+        <h1 id="ganti">Kamu Nanyea!?</h1>
+        <button onclick="displayResult()">Ganti</button>
+
+        <p><b>BAB : Iframe</b></p>
+        <iframe src="murni.html" frameborder="1" name="iframe_a" width="300" height="200" style="border: none;"></iframe>
+
+        <!-- membuat link yang dibuka di iframe, harus menuliskan target, dan di iframe yang dituju harus memiliki name yang sesuai  -->
+        <p><a href="https://nandoperd.github.io/portofolio/" target="iframe_a">nandoperd</a></p>
+
+        <p><b>BAB : javascript</b></p>
+
+        <!-- javascript tanpa menggunakan function -->
+        <button type="button" onclick="document.getElementById('demo').innerHTML = Date()">Sekarang</button>
+        <p id="demo"></p>
+
+        <!-- javascript dapat mengganti Konten, di bawah adalah contoh javascript menggunakan function -->
+        <button type="button" onclick="haloNando()">Klik!</button>
+        <p id="halo">Hai</p>
+        
+        <!-- javascript mengganti style -->
+        <button type="button" onclick="myWarna()">Ganti Warna!</button>
+        <p id="warna">Tulisan Ini Masih Hambar</p>
+
+        <!-- javascript mengganti gambar -->
+        <script>
+        function muka(ss) {
+            var pic;
+            if (ss == 0) {
+                pic = "img/sad.png"
+            } else {
+                pic = "img/smiling.png"
+            }
+            document.getElementById('myGambar').src = pic;
+        }
+        </script>
+
+        <img id="myGambar" src="img/sad.png" alt="" width="100" height="100">
+        <p>
+            <button type="button" onclick="muka(1)">Senang</button>
+            <button type="button" onclick="muka(0)">Sedih</button>
+        </p>
+
+        <p><b>BAB : Layout</b></p>
+        <!-- di bawah ini saya akan mencoba untuk mendesain layout dengan float yang terdiri dari header, section, nav, article, dan footer  -->
+        <!-- css pada layout ini saya tulis di styles.css -->
+        <header>
+            <h2>Header</h2> 
+        </header>
+
+        <section>
+            <nav>
+                <ul>
+                    <li>Beranda</li>
+                    <li>Profil</li>
+                    <li>Pesan</li>
+                </ul>
+            </nav>
+
+            <article>
+                Artikel <br>
+                <p>blalblablblblblalblblblbllblblblsdgkmskmkmkmkmkmkmkmzdcssssssspaspspspdppasamdmnlvnvdslsdbsjkbnjnfkmaerlkmaskmak sdlsdsdkdmdkmskmdsdvwakmawkmakmaksdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsd </p>    
+            </article>
+
+            <nav class="kanan">
+            <ul>
+                <li>Search</li>
+                <li>Logout</li>
+                <br>
+            </ul>
+            </nav>
+        </section>
+
+        <footer>
+            <p>by : nandoperd</p>
+        </footer>
+
+        <h1>aside</h1>
+        <!-- css aside saya tulis di dalam style head, aside seperti side-bar dan sangat cocok untuk web yang berisi artikel/tulisan lain -->
+        <p>My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! I had a great summer together with my family!</p>
+
+        <aside>
+        <p>The Epcot center is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+        </aside>
+
+        <p>My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! I had a great summer together with my family!</p>
+        <p>My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! I had a great summer together with my family!</p>
+
+
+        <br>
+        <!-- layout menggunakan grid -->
+        <p align="center">Layout Grid</p>
+        <div class="grid-container">
+            <div class="grid-item">1</div>
+            <div class="grid-item">2</div>
+            <div class="grid-item">3</div>  
+            <div class="grid-item">4</div>
+            <div class="grid-item">5</div>
+            <div class="grid-item">6</div>  
+            <div class="grid-item">7</div>
+            <div class="grid-item">8</div>
+            <div class="grid-item">9</div>  
+          </div>
+
+        <p><b>BAB : Responsif</b></p>
+        <!-- responsif pada dasarnya sudah diatur di dalam head "meta" -->
+        
+        <!-- jika style width diberikan width 100% akan berpotensi gambar akan membesar/tetap jika skala dikecilkan -->
+        <img src="img/nandoperd.png" style="width: 100%;" alt="">
+
+        <!-- maka agar responsif dapat menggunakan max-width -->
+        <img src="img/nandoperd.png" style="max-width:100%;height:auto;" alt="">
+        <!-- gambar akan ditampilkan sesuai ukuran aslinya dan membesar ketika skala dibesarkan, dan mengecil ketika skala dikecilkan -->
+
+        <p><b>BAB : Kode Komputer</b></p>
+        <p>code berguna untuk menjelaskan kode/angka </p>
+        <table>
+            <tr>
+                <td>            
+                    <p>tanpa code</p>
+                    x = 7+8 
+                    y = 9,3
+                </td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td>
+                    <p>dengan code</p>
+                    <code>
+                        x = 7+8 
+                        y = 9,3
+                    </code>
+                </td>
+            </tr>
+        </table>
+
+        <p>Contoh kbd (keyboard) : <kbd>Ctrl + Z</kbd></p>
+        <p>Contoh samp (sample) : <samp>Press F1 to Continue</samp></p>
+        <p>Contoh var (variabel) : <var>a + b + c</var></p>
+
+        <p><b>BAB : Karakter Entiti</b></p>
+        <p style="font-size: large;">
+            &lt; --- &#60;
+            &nbsp; -- &gt; -- &amp; -- &quot; -- &apos; -- &cent; -- &pound; <br>
+            &yen; -- &euro; -- &copy; -- &reg; -- &trade; -- &larr; -- &uarr; <br>
+            &rarr; -- &darr; -- &spades; -- &clubs; -- &hearts; -- &diams;
+        </p>
+
+        <a href="https://www.w3schools.com/charsets/ref_utf_math.asp">link simbol matematika w3schools</a>
+
+        <p>Contoh Emoji :</p>
+        <p style="font-size:48px">
+            &#128512; &#128516; &#128525; &#128151;
+            </p>
+
+        <a href="https://validator.w3.org/">link validator html punyanya W3C</a>
+
+        <p><b>BAB : Form</b></p>
+
+        <!-- form action harus ditulis di awal sebagai alamat proses/eksekusi data yang kita isi di form, sedangkan metohod adalah metode apa
+        yang kita pilih get atau post-->
+
+        <form action="proses.php" method="post" autocomplete="on"> <!-- autocomplete memungkinkan agar form yang kita isi akan tetap diisi ketika refresh contohnya-->
+            <label for="">Silahkan diisi :</label>
+            <input type="text" name="" id="" placeholder="text" value="text">
+            <input type="radio" name="" id="">
+            <input type="checkbox" name="" id="">
+            <input type="submit"> <!-- type submit akan mengarahkan ke link form action -->
+            <br>
+            <!-- text area -->
+            <textarea name="message" rows="10" cols="30"></textarea>
+            <textarea name="message" style="width:200px; height:100px;"></textarea>
+            <!-- button -->
+            <button type="button" onclick="alert('Halo Badso!')">Klik!</button>
+            <!-- fieldset -->
+            <form action="/proses.php">
+                <fieldset>
+                  <legend>Judul</legend>
+                  <label for="fname">First name:</label><br>
+                  <input type="text" id="fname" name="fname"><br>
+                  <label for="lname">Last name:</label><br>
+                  <input type="text" id="lname" name="lname"><br><br>
+                  <input type="submit" value="Submit">
+                </fieldset>
+            </form> 
+            <!-- output, code di bawah ada js nya, memunculkan angka dari bilangan yang kita geser seperti volume -->
+            <form action="/proses.php"
+            oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+            0
+            <input type="range"  id="a" name="a" value="50">
+            100 +
+            <input type="number" id="b" name="b" value="50">
+            =
+            <output name="x" for="a b"></output>
+            <br><br>
+            <!-- <input type="submit"> -->
+            </form>
+            <!-- beberapa tipe input  -->   
+            <input type="button">
+            <input type="checkbox">
+            <input type="color">
+            <input type="date">
+            <input type="datetime-local">
+            <input type="email">
+
+            <!-- contoh input email dengan validasi tertentu -->
+            <form action="#">
+                <input type='email' pattern=".+@*\.com" placeholder="yourname@gmail.com">
+                <input type='submit'/>
+            </form> <!--pattern di atas mengharuskan email diisi dengan aturan AWAL@AKHIR.com-->
+            <input type="file" accept="jpg/png"> <!--atribut accept memberi batasan format file yang diupload-->
+            <input type="hidden">
+            <input type="image">
+            <input type="month">
+            <input type="number">
+            <input type="password">
+            <input type="radio">
+            <input type="range">
+            <input type="reset">
+            <input type="search">
+            <input type="submit">
+            <input type="tel">
+            <input type="text">
+            <input type="time">
+            <input type="url">
+            <input type="week">
+            <br>
+            <!-- contoh submit menggunakan gambar -->
+            <input type="image" src="img/download.png" alt="Submit" width="48" height="48">
+            <!-- contoh input nomor dengan step dan value -->
+            <form action="/proses.php">
+                <label for="quantity">Jumlah:</label>
+                <input type="number" id="quantity" name="quantity" min="0" max="100" step="10" value="30">
+                <input type="submit" value="Submit">
+            </form>
+            <!-- contoh menggunakan range -->
+            <form action="proses.php" method="get">
+                <label for="vol">Volume (antara 0 and 50):</label>
+                <input type="range" id="vol" name="vol" min="0" max="50">
+                <input type="submit" value="Submit">
+            </form>
+            <!-- contoh input harus sesuai Format -->
+            <form action="/action_page.php">
+                <label for="phone">Enter a phone number:</label><br><br>
+                <input type="tel" id="phone" name="phone" placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required><br><br>
+                <small>Format: 123-45-678</small><br><br>
+                <input type="submit" value="Submit">
+            </form>
+
+            <!-- atribut input -->
+            <!--value-->
+            <input type="text" id="fname" name="fname" value="John" disabled><br>
+            <!-- readonly -->
+            <input type="text" id="fname" name="fname" value="John" readonly><br>
+            <!-- disable -->
+            <input type="text" id="fname" name="fname" value="John" disabled><br>
+            <!-- size -->
+            <input type="text" id="pin" name="pin" size="4"><br>
+            <!-- max length -->
+            <input type="text" id="pin" name="pin" maxlength="4" size="4"><br>
+            <!-- min and max -->
+            <input type="date" id="datemax" name="datemax" max="1979-12-31"><br><br>
+
+            <label for="datemax">Enter a date before 1980-01-01:</label>
+            <input type="date" id="datemax" name="datemax" max="1979-12-31"><br><br>
+          
+            <label for="datemin">Enter a date after 2000-01-01:</label>
+            <input type="date" id="datemin" name="datemin" min="2000-01-02"><br><br>
+            <!-- multiple, berarti bahwa kita bisa memasukkan lebih dari 1 file -->
+            <form>
+                <label for="files">Select files:</label>
+                <input type="file" id="files" name="files" multiple>
+            </form> 
+            <!-- placeholder & pattern (seperti validasi) -->
+            <input type="tel" id="phone" name="phone"
+            placeholder="123-45-678"
+            pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+            <!-- required -->
+            <input type="text" id="username" name="username" required>
+            <!-- step -->
+            <input type="number" id="points" name="points" step="3">    
+            <!-- autofocus, membuat form langsung tertuju -->
+            <input type="text" id="fname" name="fname" autofocus><br>
+            <!-- height dan width -->
+            <input type="image" src="img/download.png" alt="Submit" width="48" height="48">
+            <!-- list, biasanya berhubungan dengan database -->
+            <form action="/action_page.php">
+                <input list="browsers" name="browser">
+                <datalist id="browsers">
+                  <option value="Internet Explorer">
+                  <option value="Firefox">
+                  <option value="Chrome">
+                  <option value="Opera">
+                  <option value="Safari">
+                </datalist>
+                <input type="submit" value="Submit">
+            </form>
+            <!-- autocomplete, seperti yang dijelaskan di atas -->
+
+            <!-- contoh input search -->
+            <!-- Menyebabkan URL ada tambahan ?query=TEXT-YANG-KAMU-MASUKKAN -->
+            <form action="#">
+                <input type='search' name="query" placeholder="search">
+                <input type='submit'/>
+            </form>
+        </form>
+
+        <p><b>BAB : Canvas</b></p>
+        <!--canvas pada dasarnya harus didukung javascript-->
+        <!-- contoh canvas tanpa js hanya kotak seperti tabel biasa-->
+        <!-- lihat di script js di bawah dengan id myCanvas untuk melihat code2 yang berisi di canvas -->
+        <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
+            Your browser does not support the HTML canvas tag.
+        </canvas>
+        
+        <!-- isi canvas dengan gambar -->
+        <p>Image to use:</p>
+        <img id="np" src="img/nandoperd.png" alt="NP" width="220" height="277">
+
+        <p>Canvas to fill:</p>
+        <canvas id="myCanvasGambar" width="250" height="300"
+        style="border:1px solid #d3d3d3;">
+        Your browser does not support the HTML canvas tag.</canvas>
+
+        <p><button onclick="myCanvasGambar()">Klik</button></p>
+
+        <p><b>BAB : SVG</b></p>
+        <!-- svg adalah vector-based graphics -->
+        <!-- lingkaran -->
+        <svg width="100" height="100">
+            <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+        </svg>
+        <!-- persegi panjang -->
+        <svg width="400" height="100">
+            <rect width="400" height="100" style="fill:rgb(0,0,255);stroke-width:10;stroke:rgb(0,0,0)" />
+        </svg>
+
+        <!-- contoh-contoh lain -->
+        <svg width="400" height="180">
+            <rect x="50" y="20" rx="20" ry="20" width="150" height="150"
+            style="fill:red;stroke:black;stroke-width:5;opacity:0.5" />
+        </svg>
+
+        <svg width="300" height="200">
+            <polygon points="100,10 40,198 190,78 10,78 160,198"
+            style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;" />
+        </svg>
+
+        <svg height="130" width="500">
+            <defs>
+              <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:rgb(255,255,0);stop-opacity:1" />
+                <stop offset="100%" style="stop-color:rgb(255,0,0);stop-opacity:1" />
+              </linearGradient>
+            </defs>
+            <ellipse cx="100" cy="70" rx="85" ry="55" fill="url(#grad1)" />
+            <text fill="#ffffff" font-size="45" font-family="Verdana" x="50" y="86">SVG</text>
+            Sorry, your browser does not support inline SVG.
+        </svg>
+
+        <p><b>BAB : Media</b></p>
+        <!-- video. contoh di bawah adalah memberikan sumber video lebih dari satu, Saat format mp4 tidak didukung, maka browser akan melihat format ogg-->
+        <video width="400" controls> <!--controls disini akan menampilkan control seperti play, pause, and volume-->
+            <source src="np.mp4" type="video/mp4">
+            <source src="mov_bbb.ogg" type="video/ogg"> 
+            Your browser does not support HTML video.
+        </video>
+        <!-- selain atribut control ada juga artribut autoplay muted dan loop (untuk mengulang video otomatis) -->
+
+        <!-- video dengan sentuhan js -->
+        <div style="text-align:center"> 
+            <button onclick="playPause()">Play/Pause</button> 
+            <button onclick="makeBig()">Big</button>
+            <button onclick="makeSmall()">Small</button>
+            <button onclick="makeNormal()">Normal</button>
+            <br><br>
+            <video id="video1" width="420">
+              <source src="np.mp4" type="video/mp4">
+              <source src="np.mp4" type="video/ogg">
+              Your browser does not support HTML video.
+            </video>
+        </div>
+        
+        <!-- audio, punya atribut seperti autoplay dan muted -->
+        <audio controls>
+            <source src="elephant.ogg" type="audio/ogg">
+            <source src="elephant.wav" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+
+        <p><b>BAB : API</b></p>
+        <!-- code di bawah ini berintegrasi dengan code javascript -->
+        <!-- yg ini diskip -->
+        <!-- <p>Klik untuk melihat lokasimu.</p>
+        <button onclick="getLocation()">Klik</button>
+        <p id="lokasi"></p>
+        <br> -->
+
+        <b><ins>lokasi</ins></b> <!--lokasi-->
+        <p>Klik untuk melihat lokasimu (lagi di mobil, atau lagi bawa hp).</p>
+
+        <button onclick="getLocation()">Klik</button>
+
+        <p id="lokasi2"></p><br>
+        
+        <b><ins>drag and drop</ins></b><!--drag and drop-->
+        <!-- kode di bawah berelasi dengan kode javascript di atas di dalam head -->
+        <p>Pindahkan Gambar di Bawah Ini :</p>
+        <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <img src="img/NP.png" draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="31">
+        </div>
+          
+        <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <br><br><br><br><br>
+        <!-- atribut draggable="true" membuat gambar bisa didrag,  -->
+
+        <b><ins>web storage</ins></b><!-- web storage -->
+        <!-- menampilkan data yang disimpan dalam local storage -->
+        <div id="result"></div><br>
+
+        <!-- menghitung Jumlah klik, kode di bawah berelasi dengan kode js di head atas dengan id "hitung" -->
+        <!-- di bawah ini klik dihitung menggunakan localStorage, hitungan akan terus berlanjut walaupun web diulang diclose -->
+        <p><button onclick="clickCounter()" type="button">Klik!</button></p>
+        <div id="hitung"></div>
+        
+        <!-- di bawah ini menghitung klik menggunakan session, ketika diulang hitungan kembali dari 1 -->
+        <p><button onclick="clickCounter()" type="button">Klik!</button></p>
+        <div id="result2"></div>
+
+        <b><ins>web worker</ins></b><!-- web worker -->
+        <!-- di bawah ini code web worker berelasi dengan script js dengan id gerak di bawah dan berelasi dengan script demo_workers.js-->
+        <p>Hitung jalan: <output id="gerak"></output></p>
+        <button onclick="startWorker()">Mulai</button> 
+        <button onclick="stopWorker()">Stop</button>
+
+        <b><ins>Server-Sent Events (SSE)</ins></b><!--sse-->
+        <!-- menampilkan pembaruan (update ) yang dikirim oleh server -->
+        <!-- berelasi dengan skrip js id server di bawah dan berelasi dengan file demo_sse.php-->
+        <h1>Meminta Update Server</h1>
+        <div id="server"></div>
+
+        <h1>SELESAI HTML (ref : w3schools)</h1>
+
+        <h2>referensi kodi.ng</h2>
+        <details>
+            <summary>Catatan Kaki (klik)</summary>
+            - Kaki Gajah<br>
+            - Kaki Kakekku
+        </details>
+
+        <!-- ada atribut img namanya loading, contoh isinya lazy, gunanya agar memuat gambar ketika dibutuhkan saja, yang akan mempercepat situs kamu dan hemat sumber daya -->
+        <img src="img/NP.png" alt="NP" loading="lazy" style="width: 50px;">
+
+        <!-- menampilkan gambar dengan figure -->
+        <figure>
+            <img src="img/smiling.png" style="width: 50px;">
+            <figcaption>Gambar nyengir</figcaption>
+        </figure>
+
+        <!-- contoh SVG -->
+        <svg width="200" height="200">
+            <rect width="200" height="200" style="fill:white;stroke-width:10;stroke:blue" />
+        </svg>
+
+        <svg width="200" height="200">
+            <circle cx="50" cy="50" r="40" stroke="red" stroke-width="2" fill="orange" />
+        </svg>
+
+        <!-- contoh canvas -->
+        <canvas id="canvasKoding" width="400" height="200"></canvas>
+
+
+        <!-- script javascript -->
+        <script>
+        function myFunction() {
+        var x = document.getElementsByClassName("city");
+        for (var i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        }
+
+        function displayResult() {
+        document.getElementById("ganti").innerHTML = "Kamu Bertanyea-tanyea!?!";
+        }
+
+        function haloNando() {
+            document.getElementById("halo").innerHTML = "Hello World!"
+        }
+
+        function myWarna() {
+            document.getElementById('warna').style.fontSize = "30px";
+            document.getElementById('warna').style.color = "purple";
+            document.getElementById('warna').style.backgroundColor = "pink";
+            
+        }
+
+        // code canvas
+        // code garis miring tengah
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.moveTo(0, 0);
+        ctx.lineTo(200, 100);
+        ctx.stroke();
+
+        //bulat
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.beginPath();
+        ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+        ctx.stroke();
+
+        //text
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.font = "30px Arial";
+        ctx.fillText("Hello World", 10, 50);
+
+        //stroke text
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.font = "30px Arial";
+        ctx.strokeText("Hello World", 10, 50);
+
+        //gradient linear
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        // Create gradient
+        var grd = ctx.createLinearGradient(0, 0, 200, 0);
+        grd.addColorStop(0, "red");
+        grd.addColorStop(1, "white");
+        // Fill with gradient
+        ctx.fillStyle = grd;
+        ctx.fillRect(10, 10, 150, 80);
+
+        //gradient circular
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        // Create gradient
+        var grd = ctx.createRadialGradient(75, 50, 5, 90, 60, 100);
+        grd.addColorStop(0, "red");
+        grd.addColorStop(1, "white");
+        // Fill with gradient
+        ctx.fillStyle = grd;
+        ctx.fillRect(10, 10, 150, 80);
+
+        //isi canvas dengan gambar
+        function myCanvasGambar() {
+        var c = document.getElementById("myCanvasGambar");
+        var ctx = c.getContext("2d");
+        var img = document.getElementById("np");
+        ctx.drawImage(img,10,10);
+        }
+        var myVideo = document.getElementById("video1"); 
+
+        function playPause() { 
+        if (myVideo.paused) 
+            myVideo.play(); 
+        else 
+            myVideo.pause(); 
+        } 
+
+        function makeBig() { 
+            myVideo.width = 560; 
+        } 
+
+        function makeSmall() { 
+            myVideo.width = 320; 
+        } 
+
+        function makeNormal() { 
+            myVideo.width = 420; 
+        }
+
+        //cek garis bujur lokasi
+        var x = document.getElementById("lokasi");
+
+        function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+        } else { 
+            x.innerHTML = "Geolocation is not supported by this browser.";
+        }
+        }
+
+        function showPosition(position) {
+        x.innerHTML = "Latitude: " + position.coords.latitude + 
+        "<br>Longitude: " + position.coords.longitude;
+        }
+
+        //pesan jika ada error
+        function showError(error) {
+        switch(error.code) {
+            case error.PERMISSION_DENIED:
+            x.innerHTML = "User denied the request for Geolocation."
+            break;
+            case error.POSITION_UNAVAILABLE:
+            x.innerHTML = "Location information is unavailable."
+            break;
+            case error.TIMEOUT:
+            x.innerHTML = "The request to get user location timed out."
+            break;
+            case error.UNKNOWN_ERROR:
+            x.innerHTML = "An unknown error occurred."
+            break;
+        }
+        }
+
+        
+        var x = document.getElementById("lokasi2");
+
+        //memakai watchposition, untuk stop nya, pakai clearWatch()
+        function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.watchPosition(showPosition);
+        } else { 
+            x.innerHTML = "Geolocation is not supported by this browser.";
+        }
+        }
+            
+        function showPosition(position) {
+            x.innerHTML="Latitude: " + position.coords.latitude + 
+            "<br>Longitude: " + position.coords.longitude;
+        }
+
+        //web storage
+        // Check browser support
+        if (typeof(Storage) !== "undefined") {
+        // Store
+        localStorage.setItem("lastname", "nandoperd");
+        // Retrieve
+        document.getElementById("result").innerHTML = localStorage.getItem("lastname");
+        } else {
+        document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+        }
+
+        //web worker
+        var w;
+
+        function startWorker() {
+        if(typeof(Worker) !== "undefined") {
+            if(typeof(w) == "undefined") {
+            w = new Worker("demo_workers.js");
+            }
+            w.onmessage = function(event) {
+            document.getElementById("gerak").innerHTML = event.data;
+            };
+        } else {
+            document.getElementById("gerak").innerHTML = "Sorry, your browser does not support Web Workers...";
+        }
+        }
+
+        function stopWorker() { 
+        w.terminate();
+        w = undefined;
+        }
+
+        //SSE
+        if(typeof(EventSource) !== "undefined") {
+        var source = new EventSource("demo_sse.php");
+        source.onmessage = function(event) {
+            document.getElementById("server").innerHTML += event.data + "<br>";
+        };
+        } else {
+        document.getElementById("server").innerHTML = "Sorry, your browser does not support server-sent events...";
+        }
+
+        //canvas dari kodi.ng
+        var c = document.getElementById("canvasKoding");
+        var ctx = c.getContext("2d");
+        
+        // menggambar garis
+        ctx.moveTo(0, 0);
+        ctx.lineTo(200, 100);
+        ctx.stroke();
+
+        //menggambar tulisan
+        ctx.font = "30px Arial";
+        ctx.fillText("nandoperd", 220, 150);
+
+        </script>
+
+        <!-- noscript memungkinkan ditulis kepada yang device nya tidak support javascript -->
+        <noscript>Maaf, Komputer Anda Tidak Mendukung JavaScript</noscript>
+
+        
+    </body>
+
+    <!-- Alhamdulillah selesai sudah bagian HTML, kita lanjut ke CSS
+    file belajar css akan adalah belajar.html dan akan berelasi dengan stylebelajar.css -->
+</html>

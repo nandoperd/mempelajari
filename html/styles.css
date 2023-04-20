@@ -1,0 +1,130 @@
+/* Place your CSS styles in this file */
+
+body {
+    background-color: aliceblue;
+}
+
+h1 {
+    text-align: center;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: normal;
+}
+
+h2 {
+    text-align: center;
+    font-family: "Helvetica", Arial, Tahoma, Serif;
+    font-weight: lighter;
+}
+
+h3 {
+    font-family: "Helvetica", Arial, Tahoma, Serif;
+    font-weight: lighter;
+}
+
+h4 {
+    color: rebeccapurple;
+    border: brown;
+    border-style: solid;
+    margin: 20px;
+    padding: 20px;
+}
+
+/* link */
+a:link {
+  color: green;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited {
+  color: rgb(24, 143, 97);
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color: rgb(125, 0, 228);
+  background-color: transparent;
+  text-decoration: underline;
+}
+a:active {
+  color: rgb(235, 93, 27);
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.babi {
+  color: pink;
+  background-color: brown;
+  border: 1px solid;
+}
+
+.ngepet {
+  text-align: center;
+  text-decoration: solid;
+}
+
+#monyet {
+  color: brown;
+  background-color: green;
+}
+
+/* untuk BAB Layout float*/
+
+header {
+  background-color: bisque;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 30px;
+  color: brown;
+  padding: 30px ;
+}
+
+nav {
+  float: left;
+  background: rgb(201, 143, 17);
+  width: 15%;
+  padding: 15px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 10px;
+  width: 10%; 
+}
+
+.kanan {
+  float: right;
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+footer {
+  background-color: blanchedalmond;
+  color: brown;
+  text-align: center;
+  padding: 10px;
+}
+
+/* untuk BAB Layout grid*/
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: #2196F3;
+  padding: 10px;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
