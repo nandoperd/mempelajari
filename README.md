@@ -1,5 +1,5 @@
 # mempelajari
-### by : nandoperd
+### by : nandoperd (https://nandoperd.github.io/mempelajari/)
 
 #### Mempelajari dasar-dasar :
 -  HTML
